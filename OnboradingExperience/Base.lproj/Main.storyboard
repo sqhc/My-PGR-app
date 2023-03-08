@@ -16,26 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="b4G-Vb-S0n">
-                                <rect key="frame" x="20" y="44" width="374" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="b4G-Vb-S0n">
+                                <rect key="frame" x="20" y="44" width="374" height="100"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WJg-8q-fRF">
-                                <rect key="frame" x="20" y="180" width="374" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WJg-8q-fRF">
+                                <rect key="frame" x="20" y="152" width="374" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">愿每一位重返地球的人类之子平安                                         May every child of mankind that come back to earth can be safe and peaceful.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PGR" translatesAutoresizingMaskIntoConstraints="NO" id="KZ7-eQ-VYv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PGR" translatesAutoresizingMaskIntoConstraints="NO" id="KZ7-eQ-VYv">
                                 <rect key="frame" x="87" y="734" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Nbp-05-wpn"/>
+                                </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9O1-e2-0rH">
+                                <rect key="frame" x="0.0" y="280" width="414" height="232"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="232" id="IVB-Eb-9Fd"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WJg-8q-fRF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2aG-gc-b9y"/>
+                            <constraint firstItem="b4G-Vb-S0n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Na-t1-QWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJg-8q-fRF" secondAttribute="trailing" constant="20" id="AME-Ye-gAL"/>
+                            <constraint firstItem="KZ7-eQ-VYv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="CUj-ec-as1"/>
+                            <constraint firstItem="9O1-e2-0rH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ed2-CC-zOu"/>
+                            <constraint firstItem="b4G-Vb-S0n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hf2-Rs-li1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9O1-e2-0rH" secondAttribute="trailing" id="PML-HB-ZC5"/>
+                            <constraint firstItem="9O1-e2-0rH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="280" id="Ris-mq-7u2"/>
+                            <constraint firstItem="KZ7-eQ-VYv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Uqv-nN-cR6"/>
+                            <constraint firstItem="WJg-8q-fRF" firstAttribute="top" secondItem="b4G-Vb-S0n" secondAttribute="bottom" constant="8" symbolic="YES" id="dRq-di-3gB"/>
+                            <constraint firstItem="9O1-e2-0rH" firstAttribute="centerX" secondItem="KZ7-eQ-VYv" secondAttribute="centerX" id="t7V-Rl-kWc"/>
+                            <constraint firstItem="9O1-e2-0rH" firstAttribute="top" secondItem="WJg-8q-fRF" secondAttribute="bottom" constant="8" symbolic="YES" id="ws8-2F-bE3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b4G-Vb-S0n" secondAttribute="trailing" constant="20" id="xa9-3u-HK3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
