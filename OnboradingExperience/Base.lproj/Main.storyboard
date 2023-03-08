@@ -29,6 +29,10 @@
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PGR" translatesAutoresizingMaskIntoConstraints="NO" id="KZ7-eQ-VYv">
+                                <rect key="frame" x="87" y="734" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,6 +74,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PGR" width="512" height="512"/>
         <image name="Title" width="250" height="100"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
