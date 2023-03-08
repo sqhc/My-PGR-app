@@ -8,10 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    private let viewModels: [CollectionTableViewModel] = [
+        CollectionTableViewModel(
+            viewModels: [
+                TileCollectionViewCellViewModel(title: "Characters", backgroundColor: .red),
+                TileCollectionViewCellViewModel(title: "Organizations", backgroundColor: .cyan),
+                TileCollectionViewCellViewModel(title: "Items&Concepts", backgroundColor: .blue),
+                TileCollectionViewCellViewModel(title: "Developers", backgroundColor: .black)
+            ]
+        )
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
     }
     
     override func viewDidLayoutSubviews() {
@@ -24,6 +39,30 @@ class ViewController: UIViewController {
         }
     }
 
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource, CollectionTableViewCellDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let viewModel = viewModels[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as? CollectionTableViewCell else{
+            fatalError()
+        }
+        cell.congfigure(with: viewModel)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.bounds.size.width/2
+    }
+    
+    //MARK: -delegate
+    func DidTapItem(with viewModel: TileCollectionViewCellViewModel){
+        //
+    }
 }
 
 class Core{

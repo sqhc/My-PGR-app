@@ -18,6 +18,10 @@
 		063C9E3129B52A2F00AA995D /* OnboradingExperienceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9E3029B52A2F00AA995D /* OnboradingExperienceUITests.swift */; };
 		063C9E3329B52A2F00AA995D /* OnboradingExperienceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9E3229B52A2F00AA995D /* OnboradingExperienceUITestsLaunchTests.swift */; };
 		063C9E4029B5369C00AA995D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9E3F29B5369C00AA995D /* WelcomeViewController.swift */; };
+		06961E2429B9118E007F32CF /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2329B9118E007F32CF /* CollectionTableViewCell.swift */; };
+		06961E2629B91B9E007F32CF /* CollectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */; };
+		06961E2829B91EAF007F32CF /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */; };
+		06961E2A29B92093007F32CF /* TileCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		063C9E3029B52A2F00AA995D /* OnboradingExperienceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboradingExperienceUITests.swift; sourceTree = "<group>"; };
 		063C9E3229B52A2F00AA995D /* OnboradingExperienceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboradingExperienceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		063C9E3F29B5369C00AA995D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		06961E2329B9118E007F32CF /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,10 @@
 				063C9E1D29B52A2F00AA995D /* Info.plist */,
 				063C9E1529B52A1900AA995D /* OnboradingExperience.xcdatamodeld */,
 				063C9E3F29B5369C00AA995D /* WelcomeViewController.swift */,
+				06961E2329B9118E007F32CF /* CollectionTableViewCell.swift */,
+				06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */,
+				06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */,
+				06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */,
 			);
 			path = OnboradingExperience;
 			sourceTree = "<group>";
@@ -264,8 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06961E2629B91B9E007F32CF /* CollectionTableViewCellViewModel.swift in Sources */,
+				06961E2A29B92093007F32CF /* TileCollectionViewCellViewModel.swift in Sources */,
 				063C9E1729B52A1900AA995D /* OnboradingExperience.xcdatamodeld in Sources */,
+				06961E2429B9118E007F32CF /* CollectionTableViewCell.swift in Sources */,
 				063C9E4029B5369C00AA995D /* WelcomeViewController.swift in Sources */,
+				06961E2829B91EAF007F32CF /* TileCollectionViewCell.swift in Sources */,
 				063C9E1129B52A1900AA995D /* ViewController.swift in Sources */,
 				063C9E0D29B52A1900AA995D /* AppDelegate.swift in Sources */,
 				063C9E0F29B52A1900AA995D /* SceneDelegate.swift in Sources */,

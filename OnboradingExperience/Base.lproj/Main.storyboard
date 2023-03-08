@@ -61,6 +61,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome to Punishing Gray Raven" id="bYr-ll-ijD"/>
                     <connections>
+                        <outlet property="tableView" destination="9O1-e2-0rH" id="aZZ-hp-H6H"/>
                         <segue destination="4zp-da-oez" kind="show" identifier="character" id="EFO-LX-89U"/>
                         <segue destination="6bj-H6-gYD" kind="show" identifier="organization" id="Ik4-gR-vgO"/>
                         <segue destination="SYk-QO-gpo" kind="show" identifier="itemconcept" id="VCn-zL-GFp"/>
