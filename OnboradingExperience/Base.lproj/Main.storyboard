@@ -242,6 +242,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Organizations" id="Quo-yY-7HB"/>
+                    <connections>
+                        <outlet property="csuImage" destination="npU-BH-1f6" id="p9H-Sr-TWY"/>
+                        <outlet property="csuTextView" destination="6nk-Zl-rL9" id="ZNs-JH-bNT"/>
+                        <outlet property="grayRavenImage" destination="IyI-a6-FGm" id="k29-bq-hZr"/>
+                        <outlet property="grayRavenTextView" destination="UgH-ef-KBf" id="LSN-Kh-Zx5"/>
+                        <outlet property="worldGovernmentImage" destination="e6V-Qc-d0H" id="gbC-rl-pbq"/>
+                        <outlet property="worldGovernmentTextView" destination="Gbq-a8-nre" id="CTV-ef-coM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igl-S9-qHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
