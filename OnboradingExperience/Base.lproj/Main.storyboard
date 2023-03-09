@@ -141,7 +141,7 @@
                                 <rect key="frame" x="207" y="363" width="187" height="278"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90873427243576832" green="0.25528248371928636" blue="0.085510255439851537" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <mutableString key="text">The source of Lucia's consciousness which means she is the real Lucia.                                  At a large-scale seige on the ground, Ravenge who was the ex commander of Gray Raven Squad connected with an Ascendanter to seek for promotion and merit then he got infected by Punish Virus. To hide his fault, he provided false information of enemy so that Lucia and other teammates can be killed. During the fight, Ravenge destoried two other teammates' origin against device with pistol, but Lucia still managed to kill the infector with the cost of sacrifice of two other teammates and went back to Ravenge, Ravenge then reduced the power of Lucia's origin against device, Lucia then used her remaining power to cut one of his arm but went into self-hibernation mechanism after all power was spent...(Sorry, lots of thing happened after this, but don't think I have the time to finish the description) </mutableString>
+                                <string key="text">The source of Lucia's consciousness which means she is the real Lucia.                                  At a large-scale seige on the ground, Ravenge who was the ex commander of Gray Raven Squad connected with an Ascendanter to seek for promotion and merit then he got infected by Punish Virus. To hide his fault, he provided false information of enemy so that Lucia and other teammates can be killed. During the fight, Ravenge destoried two other teammates' origin against device with pistol, but Lucia still managed to kill the infector with the cost of sacrifice of two other teammates and went back to Ravenge, Ravenge then reduced the power of Lucia's origin against device, Lucia then used her remaining power to cut one of his arm but went into self-hibernation mechanism after all power was spent...(Sorry, lots of thing happened after this, but don't think I have the time to finish the description) </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -176,6 +176,68 @@
                     <view key="view" contentMode="scaleToFill" id="fIP-Hr-AgN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gray Raven Squad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob9-ud-zSQ">
+                                <rect key="frame" x="20" y="88" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gray Raven" translatesAutoresizingMaskIntoConstraints="NO" id="IyI-a6-FGm">
+                                <rect key="frame" x="230" y="88" width="164" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UgH-ef-KBf">
+                                <rect key="frame" x="20" y="117" width="202" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">One of the elite squad under the Executor Force. Player's actor is the commander of this squad.                                               Captain: Lucia                                  Commander: Player                        Squad member: Lee, Liv</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The World Government" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsE-L0-YLW">
+                                <rect key="frame" x="217" y="253" width="177" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WorldGovernment" translatesAutoresizingMaskIntoConstraints="NO" id="e6V-Qc-d0H">
+                                <rect key="frame" x="20" y="253" width="168" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gbq-a8-nre">
+                                <rect key="frame" x="196" y="282" width="198" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">The world government was formed before the disaster of Punishing Virus, it is the leader of human nominally. Nowadays it was located on Sky Garden, there is council under the government.                     The speaker of council: Hassen                                            The secretary general: Celica</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Council for Scientific Unions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DA-Y1-guY">
+                                <rect key="frame" x="20" y="505" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Science" translatesAutoresizingMaskIntoConstraints="NO" id="npU-BH-1f6">
+                                <rect key="frame" x="196" y="534" width="198" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6nk-Zl-rL9">
+                                <rect key="frame" x="20" y="534" width="168" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">A scientific research orgnization before the Golden Age, it has a wide range of scientific projects, it also participates in the formulation and deployment of combat plans.                                              It is the most important scientific research institution in Sky Graden nowadays.                 The chief technical officer: Asimov                                             Other members: Rosa, Long</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vSI-Ih-AYl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -183,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igl-S9-qHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1870" y="230"/>
+            <point key="canvasLocation" x="1869.5652173913045" y="229.6875"/>
         </scene>
         <!--Items&Concepts-->
         <scene sceneID="fd8-kT-FW7">
@@ -244,7 +306,7 @@
                                 <rect key="frame" x="20" y="580" width="240" height="282"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Most characters you control in this game are constructs.                 Human beings with well compatibility with Tantalum-193 Copolymer can be transformed into constructs. It is a bionic technology based on the perfect combination of machinery and biology transformed from the human body. Reconstructing body with special materials and completely reproducing base of human thinking with the help of Sea of ​​Consciousness System. It can decrease the effect of Punishing Virus theoretically.       </mutableString>
+                                <string key="text">Most characters you control in this game are constructs.                 Human beings with well compatibility with Tantalum-193 Copolymer can be transformed into constructs. It is a bionic technology based on the perfect combination of machinery and biology transformed from the human body. Reconstructing body with special materials and completely reproducing base of human thinking with the help of Sea of ​​Consciousness System. It can decrease the effect of Punishing Virus theoretically.       </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -379,14 +441,17 @@
         <image name="Alpha1" width="200" height="200"/>
         <image name="Alpha2" width="128" height="128"/>
         <image name="Construct" width="549" height="736"/>
+        <image name="Gray Raven" width="256" height="256"/>
         <image name="Kuro" width="420" height="142"/>
         <image name="Lucia1" width="128" height="128"/>
         <image name="Lucia2" width="140" height="140"/>
         <image name="PGR" width="512" height="512"/>
+        <image name="Science" width="256" height="256"/>
         <image name="Serum" width="256" height="256"/>
         <image name="Solon" width="428" height="468"/>
         <image name="Title" width="250" height="100"/>
         <image name="Virus" width="960" height="480"/>
+        <image name="WorldGovernment" width="400" height="400"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
