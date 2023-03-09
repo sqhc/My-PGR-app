@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -38,6 +39,17 @@ class ViewController: UIViewController {
             present(vc, animated: true, completion: nil)
         }
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        guard let url = URL(string: "https://downloads.khinsider.com/game-soundtracks/album/punishing-gray-raven-original-soundtrack-vol.1/2-16%2520Normal%2520Life.mp3") else{
+//            print("Can't play music")
+//            return
+//        }
+//        let item = AVPlayerItem(url: url)
+//        let player = AVPlayer(playerItem: item)
+//        player.play()
+//    }
 
 }
 
