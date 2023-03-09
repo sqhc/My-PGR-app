@@ -115,21 +115,15 @@
 		063C9E0B29B52A1900AA995D /* OnboradingExperience */ = {
 			isa = PBXGroup;
 			children = (
+				06961E3029B992E4007F32CF /* Views */,
+				06961E3129B99325007F32CF /* View Models */,
 				063C9E0C29B52A1900AA995D /* AppDelegate.swift */,
 				063C9E0E29B52A1900AA995D /* SceneDelegate.swift */,
-				063C9E1029B52A1900AA995D /* ViewController.swift */,
 				063C9E1229B52A1900AA995D /* Main.storyboard */,
 				063C9E1829B52A2F00AA995D /* Assets.xcassets */,
 				063C9E1A29B52A2F00AA995D /* LaunchScreen.storyboard */,
 				063C9E1D29B52A2F00AA995D /* Info.plist */,
 				063C9E1529B52A1900AA995D /* OnboradingExperience.xcdatamodeld */,
-				063C9E3F29B5369C00AA995D /* WelcomeViewController.swift */,
-				06961E2329B9118E007F32CF /* CollectionTableViewCell.swift */,
-				06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */,
-				06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */,
-				06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */,
-				06961E2B29B96155007F32CF /* CharactersViewController.swift */,
-				06961E2D29B9619D007F32CF /* OrganizationsViewController.swift */,
 			);
 			path = OnboradingExperience;
 			sourceTree = "<group>";
@@ -149,6 +143,28 @@
 				063C9E3229B52A2F00AA995D /* OnboradingExperienceUITestsLaunchTests.swift */,
 			);
 			path = OnboradingExperienceUITests;
+			sourceTree = "<group>";
+		};
+		06961E3029B992E4007F32CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				063C9E1029B52A1900AA995D /* ViewController.swift */,
+				06961E2329B9118E007F32CF /* CollectionTableViewCell.swift */,
+				06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */,
+				063C9E3F29B5369C00AA995D /* WelcomeViewController.swift */,
+				06961E2B29B96155007F32CF /* CharactersViewController.swift */,
+				06961E2D29B9619D007F32CF /* OrganizationsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06961E3129B99325007F32CF /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */,
+				06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
