@@ -8,7 +8,11 @@
 import UIKit
 
 class CharactersViewController: UIViewController {
-
+    @IBOutlet weak var LuciaImage1: UIImageView!
+    @IBOutlet weak var HiddenTextForLucia: UITextView!
+    @IBOutlet weak var AlphaImage1: UIImageView!
+    @IBOutlet weak var HiddenTextForAlpha: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

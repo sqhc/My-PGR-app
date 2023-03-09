@@ -52,6 +52,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, Collection
             fatalError()
         }
         cell.congfigure(with: viewModel)
+        cell.delegate = self
         return cell
     }
     
@@ -61,7 +62,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, Collection
     
     //MARK: -delegate
     func DidTapItem(with viewModel: TileCollectionViewCellViewModel){
-        //
+        switch viewModel.title{
+        case "Characters":
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "Characters") as? CharactersViewController{
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case "Organizations":
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "Organizations") as? OrganizationsViewController{
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case "Items&Concepts":
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "Items&Concepts"){
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        case "Developers":
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "Developers"){
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        default:
+            fatalError()
+        }
     }
 }
 

@@ -158,6 +158,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Characters" id="Z6F-3E-GYw"/>
+                    <connections>
+                        <outlet property="AlphaImage1" destination="Eyg-gI-t6D" id="qpo-nt-bCF"/>
+                        <outlet property="HiddenTextForAlpha" destination="Ern-M6-Iha" id="VLc-jI-cZU"/>
+                        <outlet property="HiddenTextForLucia" destination="20z-Xh-6FK" id="iB1-JP-6Fi"/>
+                        <outlet property="LuciaImage1" destination="t5u-ts-YRT" id="aSs-1A-BKf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qc-0r-7MQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
