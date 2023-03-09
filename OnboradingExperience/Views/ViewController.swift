@@ -10,6 +10,7 @@ import AVKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var appIconImage: UIImageView!
     
     private let viewModels: [CollectionTableViewModel] = [
         CollectionTableViewModel(
@@ -28,6 +29,12 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
+        
+        let recogizer = UITapGestureRecognizer(target: self, action: #selector(goToAppStore(_:)))
+        recogizer.numberOfTapsRequired = 1
+        recogizer.numberOfTouchesRequired = 1
+        appIconImage.isUserInteractionEnabled = true
+        appIconImage.addGestureRecognizer(recogizer)
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,6 +58,17 @@ class ViewController: UIViewController {
 //        player.play()
 //    }
 
+    @objc func goToAppStore(_ gesture: UITapGestureRecognizer){
+        if let url = URL(string: "https://apps.apple.com/us/app/punishing-gray-raven/id1571685286"){
+            UIApplication.shared.open(url)
+        }
+        else{
+            let alert = UIAlertController(title: "Oops", message: "Not able to open App Store", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(alertAction)
+            present(alert, animated: true, completion: nil)
+        }
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource, CollectionTableViewCellDelegate{
