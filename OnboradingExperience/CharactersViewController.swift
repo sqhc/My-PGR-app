@@ -17,8 +17,36 @@ class CharactersViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let recognizer1 = UITapGestureRecognizer(target: self, action: #selector(showHiddenLucia(_:)))
+        recognizer1.numberOfTapsRequired = 1
+        recognizer1.numberOfTouchesRequired = 1
+        LuciaImage1.isUserInteractionEnabled = true
+        LuciaImage1.addGestureRecognizer(recognizer1)
+        
+        let recognizer2 = UITapGestureRecognizer(target: self, action: #selector(showHiddenAlpha(_:)))
+        recognizer2.numberOfTapsRequired = 1
+        recognizer2.numberOfTouchesRequired = 1
+        AlphaImage1.isUserInteractionEnabled = true
+        AlphaImage1.addGestureRecognizer(recognizer2)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        HiddenTextForLucia.alpha = 0.0
+        HiddenTextForAlpha.alpha = 0.0
+    }
+    
+    @objc func showHiddenLucia(_ gesture: UITapGestureRecognizer){
+        UIView.animate(withDuration: 1, animations: {
+            self.HiddenTextForLucia.alpha = 1.0
+        })
+    }
+    
+    @objc func showHiddenAlpha(_ gesture: UITapGestureRecognizer){
+        UIView.animate(withDuration: 1, animations: {
+            self.HiddenTextForAlpha.alpha = 1.0
+        })
+    }
 
     /*
     // MARK: - Navigation
