@@ -22,6 +22,8 @@
 		06961E2629B91B9E007F32CF /* CollectionTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */; };
 		06961E2829B91EAF007F32CF /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */; };
 		06961E2A29B92093007F32CF /* TileCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */; };
+		06961E2C29B96155007F32CF /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2B29B96155007F32CF /* CharactersViewController.swift */; };
+		06961E2E29B9619D007F32CF /* OrganizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06961E2D29B9619D007F32CF /* OrganizationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
 		06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		06961E2B29B96155007F32CF /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		06961E2D29B9619D007F32CF /* OrganizationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */,
 				06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */,
 				06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */,
+				06961E2B29B96155007F32CF /* CharactersViewController.swift */,
+				06961E2D29B9619D007F32CF /* OrganizationsViewController.swift */,
 			);
 			path = OnboradingExperience;
 			sourceTree = "<group>";
@@ -284,6 +290,8 @@
 				06961E2829B91EAF007F32CF /* TileCollectionViewCell.swift in Sources */,
 				063C9E1129B52A1900AA995D /* ViewController.swift in Sources */,
 				063C9E0D29B52A1900AA995D /* AppDelegate.swift in Sources */,
+				06961E2E29B9619D007F32CF /* OrganizationsViewController.swift in Sources */,
+				06961E2C29B96155007F32CF /* CharactersViewController.swift in Sources */,
 				063C9E0F29B52A1900AA995D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
