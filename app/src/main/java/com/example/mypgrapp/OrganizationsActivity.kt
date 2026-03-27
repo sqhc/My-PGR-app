@@ -12,6 +12,10 @@ class OrganizationsActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.organizations_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = OrganizationAdapter(GameData.organizations)
-    }
+
+        val dataLoader = DataLoader(this)
+        val gameData = dataLoader.loadGameData()
+        if (gameData != null) {
+            recyclerView.adapter = OrganizationAdapter(gameData.organizations)
+        }
 }

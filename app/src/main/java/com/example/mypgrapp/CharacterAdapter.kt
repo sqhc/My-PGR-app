@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import android.content.Context
 
 class CharacterAdapter(private val characters: List<Character>) : RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
@@ -22,15 +23,16 @@ class CharacterAdapter(private val characters: List<Character>) : RecyclerView.A
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val character = characters[position]
+        val context = holder.itemView.context
         holder.nameTextView.text = character.name
-        holder.descriptionTextView.text = getLocalizedDescription(character.description)
-        val context = holder.imageView.context
+        holder.descriptionTextView.text = getLocalizedDescription(character.description, context)
         val resourceId = context.resources.getIdentifier(character.image, "drawable", context.packageName)
         holder.imageView.setImageResource(resourceId)
     }
 
-    private fun getLocalizedDescription(descriptions: Map<String, String>): String {
-        val preferredLanguage = java.util.Locale.getDefault().language
+    private fun getLocalizedDescription(descriptions: Map<String, String>, context: android.content.Context): String {
+        val sharedPreferences = context.getSharedPreferences("My-PGR-app", android.content.Context.MODE_PRIVATE)
+        val preferredLanguage = sharedPreferences.getString("selectedLanguage", null) ?: java.util.Locale.getDefault().language
         return descriptions[preferredLanguage] ?: descriptions["en"] ?: ""
     }
 

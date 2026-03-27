@@ -36,5 +36,5 @@ android {
 }
 
 dependencies {
-    // No dependencies for now
+    implementation("com.google.code.gson:gson:2.9.0")
 }

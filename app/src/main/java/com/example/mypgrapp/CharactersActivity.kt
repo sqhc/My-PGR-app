@@ -12,6 +12,10 @@ class CharactersActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.characters_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = CharacterAdapter(GameData.characters)
-    }
+
+        val dataLoader = DataLoader(this)
+        val gameData = dataLoader.loadGameData()
+        if (gameData != null) {
+            recyclerView.adapter = CharacterAdapter(gameData.characters)
+        }
 }
