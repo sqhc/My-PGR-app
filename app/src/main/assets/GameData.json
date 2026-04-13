@@ -1,0 +1,102 @@
+{
+  "characters": [
+    {
+      "name": "Lucia",
+      "image": "Lucia1",
+      "description": {
+        "en": "A member of the Gray Raven team, and the protagonist of the story. She is a skilled warrior who is determined to protect humanity from the Punishing Virus.",
+        "zh": "灰鸦小队的成员，故事的主角。她是一名熟练的战士，决心保护人类免受惩罚病毒的侵害。"
+      }
+    },
+    {
+      "name": "Alpha",
+      "image": "Alpha1",
+      "description": {
+        "en": "A mysterious figure who seems to have a connection to Lucia. Her motives are unclear, but she is a powerful fighter.",
+        "zh": "一个似乎与露西亚有联系的神秘人物。她的动机尚不清楚，但她是一个强大的战士。"
+      }
+    },
+    {
+      "name": "Liv",
+      "image": "Liv",
+      "description": {
+        "en": "A support member of the Gray Raven team. She is a kind and gentle person who is always there to help her teammates.",
+        "zh": "灰鸦小队的支援成员。她是一个善良温柔的人，总是在那里帮助她的队友。"
+      }
+    },
+    {
+      "name": "Lee",
+      "image": "Lee",
+      "description": {
+        "en": "A member of the Gray Raven team. He is a skilled marksman and a reliable teammate.",
+        "zh": "灰鸦小队的成员。他是一名熟练的射手和可靠的队友。"
+      }
+    },
+    {
+      "name": "Watanabe",
+      "image": "Watanabe",
+      "description": {
+        "en": "A former member of the Purifying Force. He is a powerful warrior who is now fighting alongside the Gray Raven team.",
+        "zh": "前净化部队成员。他是一个强大的战士，现在正与灰鸦小队并肩作战。"
+      }
+    },
+    {
+      "name": "Bianca",
+      "image": "Bianca",
+      "description": {
+        "en": "A member of the Purifying Force. She is a skilled swordswoman who is dedicated to her duty.",
+        "zh": "净化部队的成员。她是一位技艺精湛的女剑客，忠于职守。"
+      }
+    },
+    {
+      "name": "Teddy: Spectre",
+      "image": "TeddySpectre",
+      "description": {
+        "en": "Nearly 80% of the Spectre frame's design was done by Teddy herself. She originally based it on the Decryptor frame, aiming to craft a more combat-ready model, just in case.",
+        "zh": "骇影机体的设计近八成由泰迪亲手完成。她最初以解密者机体为基础，旨在打造一个更具战斗力的模型，以备不时之需。"
+      }
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Gray Raven",
+      "image": "Gray Raven",
+      "description": {
+        "en": "A special task force created to fight the Punishing Virus. They are the last hope for humanity.",
+        "zh": "为对抗惩罚病毒而创建的特种部队。他们是人类最后的希望。"
+      }
+    },
+    {
+      "name": "World Government",
+      "image": "WorldGovernment",
+      "description": {
+        "en": "The governing body of the remaining human survivors. They are responsible for coordinating the efforts to fight the Punishing Virus.",
+        "zh": "剩余人类幸存者的管理机构。他们负责协调对抗惩罚病毒的努力。"
+      }
+    },
+    {
+      "name": "CSU",
+      "image": "Science",
+      "description": {
+        "en": "The Consolidated Science Union, a group of scientists and engineers who are working to find a cure for the Punishing Virus.",
+        "zh": "统一科学联盟，一群致力于寻找惩罚病毒治疗方法的科学家和工程师。"
+      }
+    },
+    {
+      "name": "Purifying Force",
+      "image": "PurifyingForce",
+      "description": {
+        "en": "A military organization that is responsible for maintaining order and security in the world. They are often at odds with the Gray Raven team.",
+        "zh": "负责维护世界秩序和安全的军事组织。他们经常与灰鸦小队意见相左。"
+      }
+    },
+    {
+      "name": "Ascendant",
+      "image": "Ascendant",
+      "description": {
+        "en": "A mysterious organization that seems to be behind the Punishing Virus. Their goals are unknown, but they are a major threat to humanity.",
+        "zh": "一个似乎是惩罚病毒幕后黑手的神秘组织。他们的目标不明，但他们是人类的主要威胁。"
+      }
+    }
+  ]
+}
