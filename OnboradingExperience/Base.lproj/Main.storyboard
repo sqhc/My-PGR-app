@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lD8-T5-aYI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome to Punishing Gray Raven-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnboradingExperience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="b4G-Vb-S0n">
+                                <rect key="frame" x="20" y="88" width="374" height="100"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WJg-8q-fRF">
+                                <rect key="frame" x="20" y="196" width="374" height="76"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">愿每一位重返地球的人类之子平安                                         May every child of mankind that come back to earth can be safe and peaceful.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PGR" translatesAutoresizingMaskIntoConstraints="NO" id="KZ7-eQ-VYv">
+                                <rect key="frame" x="87" y="734" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Nbp-05-wpn"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9O1-e2-0rH">
+                                <rect key="frame" x="0.0" y="280" width="414" height="446"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="446" id="IVB-Eb-9Fd"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WJg-8q-fRF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2aG-gc-b9y"/>
+                            <constraint firstItem="b4G-Vb-S0n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Na-t1-QWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJg-8q-fRF" secondAttribute="trailing" constant="20" id="AME-Ye-gAL"/>
+                            <constraint firstItem="KZ7-eQ-VYv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="CUj-ec-as1"/>
+                            <constraint firstItem="9O1-e2-0rH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ed2-CC-zOu"/>
+                            <constraint firstItem="b4G-Vb-S0n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hf2-Rs-li1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9O1-e2-0rH" secondAttribute="trailing" id="PML-HB-ZC5"/>
+                            <constraint firstItem="9O1-e2-0rH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="280" id="Ris-mq-7u2"/>
+                            <constraint firstItem="KZ7-eQ-VYv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Uqv-nN-cR6"/>
+                            <constraint firstItem="WJg-8q-fRF" firstAttribute="top" secondItem="b4G-Vb-S0n" secondAttribute="bottom" constant="8" symbolic="YES" id="dRq-di-3gB"/>
+                            <constraint firstItem="9O1-e2-0rH" firstAttribute="centerX" secondItem="KZ7-eQ-VYv" secondAttribute="centerX" id="t7V-Rl-kWc"/>
+                            <constraint firstItem="9O1-e2-0rH" firstAttribute="top" secondItem="WJg-8q-fRF" secondAttribute="bottom" constant="8" symbolic="YES" id="ws8-2F-bE3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b4G-Vb-S0n" secondAttribute="trailing" constant="20" id="xa9-3u-HK3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome to Punishing Gray Raven" id="bYr-ll-ijD"/>
+                    <connections>
+                        <outlet property="appIconImage" destination="KZ7-eQ-VYv" id="Vbh-Mj-LmY"/>
+                        <outlet property="tableView" destination="9O1-e2-0rH" id="aZZ-hp-H6H"/>
+                        <segue destination="4zp-da-oez" kind="show" identifier="character" id="EFO-LX-89U"/>
+                        <segue destination="6bj-H6-gYD" kind="show" identifier="organization" id="Ik4-gR-vgO"/>
+                        <segue destination="SYk-QO-gpo" kind="show" identifier="itemconcept" id="VCn-zL-GFp"/>
+                        <segue destination="aEh-Yq-u2K" kind="show" identifier="developer" id="PMy-ca-42m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="98"/>
+        </scene>
+        <!--Characters-->
+        <scene sceneID="Y2S-kj-uHX">
+            <objects>
+                <viewController storyboardIdentifier="Characters" id="4zp-da-oez" customClass="CharactersViewController" customModule="OnboradingExperience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZLy-L3-23z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lucia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbf-Wc-MM6">
+                                <rect key="frame" x="20" y="88" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lucia1" translatesAutoresizingMaskIntoConstraints="NO" id="t5u-ts-YRT">
+                                <rect key="frame" x="20" y="117" width="89" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lucia2" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-yc-RQ4">
+                                <rect key="frame" x="117" y="117" width="82" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zEa-nJ-j10">
+                                <rect key="frame" x="20" y="211" width="374" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Captain of Gray Raven squad, with a characteristic of serious and persistent, one of the early batch of transforming for military constructs, forged strong srength and firm will within the long period of battlefield. Nowadays, she has uninterrupted tacit understanding with commander(player) during the fight. Though her memory has something strange, it seems that a very essential past was hidden.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="20z-Xh-6FK">
+                                <rect key="frame" x="207" y="88" width="187" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <string key="text">Actually is not the original Lucia, her consciousness is a copy from Sky Garden.               After the battle of round city, her sea of consciousness was initialized. Therefore body of Lotus and Plume is not the same Lucia.</string>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alpha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPS-WA-aVF">
+                                <rect key="frame" x="20" y="363" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Alpha1" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-gI-t6D">
+                                <rect key="frame" x="20" y="392" width="89" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Alpha2" translatesAutoresizingMaskIntoConstraints="NO" id="Idb-vi-EVH">
+                                <rect key="frame" x="117" y="392" width="82" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cCJ-UC-LD9">
+                                <rect key="frame" x="20" y="479" width="179" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">A mysterious enemy met at City No.015, left powerful and casual impression. She seems has unusual attention to Gray Raven Squad. She is an important member of Ascendant clique which was led by Luna.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ern-M6-Iha">
+                                <rect key="frame" x="207" y="363" width="187" height="278"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90873427243576832" green="0.25528248371928636" blue="0.085510255439851537" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <string key="text">The source of Lucia's consciousness which means she is the real Lucia.                                  At a large-scale seige on the ground, Ravenge who was the ex commander of Gray Raven Squad connected with an Ascendanter to seek for promotion and merit then he got infected by Punish Virus. To hide his fault, he provided false information of enemy so that Lucia and other teammates can be killed. During the fight, Ravenge destoried two other teammates' origin against device with pistol, but Lucia still managed to kill the infector with the cost of sacrifice of two other teammates and went back to Ravenge, Ravenge then reduced the power of Lucia's origin against device, Lucia then used her remaining power to cut one of his arm but went into self-hibernation mechanism after all power was spent...(Sorry, lots of thing happened after this, but don't think I have the time to finish the description) </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thanks for the management from Chinese Wiki" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOZ-D3-cfn">
+                                <rect key="frame" x="29" y="776" width="357" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lK7-Sd-zzD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Characters" id="Z6F-3E-GYw"/>
+                    <connections>
+                        <outlet property="AlphaImage1" destination="Eyg-gI-t6D" id="qpo-nt-bCF"/>
+                        <outlet property="HiddenTextForAlpha" destination="Ern-M6-Iha" id="VLc-jI-cZU"/>
+                        <outlet property="HiddenTextForLucia" destination="20z-Xh-6FK" id="iB1-JP-6Fi"/>
+                        <outlet property="LuciaImage1" destination="t5u-ts-YRT" id="aSs-1A-BKf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Qc-0r-7MQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5652173913045" y="-470.08928571428567"/>
+        </scene>
+        <!--Organizations-->
+        <scene sceneID="VaG-kP-Jsa">
+            <objects>
+                <viewController storyboardIdentifier="Organizations" id="6bj-H6-gYD" customClass="OrganizationsViewController" customModule="OnboradingExperience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fIP-Hr-AgN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gray Raven Squad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob9-ud-zSQ">
+                                <rect key="frame" x="20" y="88" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gray Raven" translatesAutoresizingMaskIntoConstraints="NO" id="IyI-a6-FGm">
+                                <rect key="frame" x="230" y="88" width="164" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UgH-ef-KBf">
+                                <rect key="frame" x="20" y="117" width="202" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">One of the elite squad under the Executor Force. Player's actor is the commander of this squad.                                               Captain: Lucia                                  Commander: Player                        Squad member: Lee, Liv</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The World Government" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsE-L0-YLW">
+                                <rect key="frame" x="217" y="253" width="177" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WorldGovernment" translatesAutoresizingMaskIntoConstraints="NO" id="e6V-Qc-d0H">
+                                <rect key="frame" x="20" y="253" width="168" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gbq-a8-nre">
+                                <rect key="frame" x="196" y="282" width="198" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">The world government was formed before the disaster of Punishing Virus, it is the leader of human nominally. Nowadays it was located on Sky Garden, there is council under the government.                     The speaker of council: Hassen                                            The secretary general: Celica</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Council for Scientific Unions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DA-Y1-guY">
+                                <rect key="frame" x="20" y="505" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Science" translatesAutoresizingMaskIntoConstraints="NO" id="npU-BH-1f6">
+                                <rect key="frame" x="196" y="534" width="198" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6nk-Zl-rL9">
+                                <rect key="frame" x="20" y="534" width="168" height="298"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">A scientific research orgnization before the Golden Age, it has a wide range of scientific projects, it also participates in the formulation and deployment of combat plans.                                              It is the most important scientific research institution in Sky Graden nowadays.                 The chief technical officer: Asimov                                             Other members: Rosa, Long</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vSI-Ih-AYl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Organizations" id="Quo-yY-7HB"/>
+                    <connections>
+                        <outlet property="csuImage" destination="npU-BH-1f6" id="p9H-Sr-TWY"/>
+                        <outlet property="csuTextView" destination="6nk-Zl-rL9" id="ZNs-JH-bNT"/>
+                        <outlet property="grayRavenImage" destination="IyI-a6-FGm" id="k29-bq-hZr"/>
+                        <outlet property="grayRavenTextView" destination="UgH-ef-KBf" id="LSN-Kh-Zx5"/>
+                        <outlet property="worldGovernmentImage" destination="e6V-Qc-d0H" id="gbC-rl-pbq"/>
+                        <outlet property="worldGovernmentTextView" destination="Gbq-a8-nre" id="CTV-ef-coM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igl-S9-qHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5652173913045" y="229.6875"/>
+        </scene>
+        <!--Items&Concepts-->
+        <scene sceneID="fd8-kT-FW7">
+            <objects>
+                <viewController storyboardIdentifier="Items&amp;Concepts" id="SYk-QO-gpo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PwX-2c-st5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Immune serum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zz-Em-3Js">
+                                <rect key="frame" x="20" y="88" width="114" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Serum" translatesAutoresizingMaskIntoConstraints="NO" id="pSN-Hb-ac2">
+                                <rect key="frame" x="20" y="108" width="114" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ope-mM-TE8">
+                                <rect key="frame" x="142" y="88" width="240" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">The item that will be used by commander in combats.                  It can provide limited times for human being to be active with no harm in environment that contains punishing virus. The Sky Garden will supply every combat team regularly.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Punishing Virus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFP-hU-2N1">
+                                <rect key="frame" x="230" y="249" width="152" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7DV-Wb-Hfm">
+                                <rect key="frame" x="20" y="364" width="362" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">It was appeared from the vacuum chamber of human being's first zero-point energy reactor. After the explosion of reactor, it leaked outside and spread to the world by atmospheric circulation. It contains both characteristics of biometric and computer virus. It can destroy HUMAN body cell and destory and erose machine's logic circuit. The machines that got infected will obtain strong destructive urge to human being or existense that resides as human consciousness.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Construct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-tN-OvL">
+                                <rect key="frame" x="20" y="551" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Construct" translatesAutoresizingMaskIntoConstraints="NO" id="Yji-3P-EgC">
+                                <rect key="frame" x="242" y="551" width="140" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pl8-oe-AJA">
+                                <rect key="frame" x="20" y="580" width="240" height="282"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Most characters you control in this game are constructs.                 Human beings with well compatibility with Tantalum-193 Copolymer can be transformed into constructs. It is a bionic technology based on the perfect combination of machinery and biology transformed from the human body. Reconstructing body with special materials and completely reproducing base of human thinking with the help of Sea of ​​Consciousness System. It can decrease the effect of Punishing Virus theoretically.       </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Virus" translatesAutoresizingMaskIntoConstraints="NO" id="a48-Km-dxR">
+                                <rect key="frame" x="7" y="242" width="222" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ufu-kf-i1T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Items&amp;Concepts" id="idr-i1-HJx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZq-YD-od5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5652173913045" y="922.76785714285711"/>
+        </scene>
+        <!--About develper-->
+        <scene sceneID="66y-L5-Ugh">
+            <objects>
+                <viewController storyboardIdentifier="Developers" id="aEh-Yq-u2K" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="37h-sJ-iI8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Kuro" translatesAutoresizingMaskIntoConstraints="NO" id="JR1-oE-tkU">
+                                <rect key="frame" x="20" y="88" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Founded: March, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2q-ow-qkd">
+                                <rect key="frame" x="20" y="224" width="170" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Headquater: Guangzhou, Guangdong Province" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-Ke-KdN">
+                                <rect key="frame" x="20" y="253" width="355" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fI7-r7-9Sx">
+                                <rect key="frame" x="20" y="282" width="374" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Game works: Twintails in Battlefield, Punishing Gray Raven.                                                                    Introduction: The former of KURO GAME was called KURO Zhuhai which was founded in 2014. KURO GAME is an internet culture company which is intended to develop two-dimension games and incubate original IPs.                                                      </string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Producer: Li, Songlun (Solon)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s0-HY-XHf">
+                                <rect key="frame" x="20" y="465" width="223" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Solon" translatesAutoresizingMaskIntoConstraints="NO" id="kuo-5H-O3n">
+                                <rect key="frame" x="77" y="494" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wish Kuro become better." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A0h-vi-iXR">
+                                <rect key="frame" x="108" y="709" width="198" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CK8-qy-GEP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About develper" id="dYU-Nj-NZS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgi-q3-7IH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="922.76785714285711"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="j8Q-m0-Kqy">
+            <objects>
+                <viewController storyboardIdentifier="Welcome" id="8o6-Yk-fx7" customClass="WelcomeViewController" customModule="OnboradingExperience" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aav-vl-YC7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBm-EQ-l1r">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TaQ-Qq-g4N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UBm-EQ-l1r" firstAttribute="top" secondItem="TaQ-Qq-g4N" secondAttribute="top" id="FOI-Pn-0wk"/>
+                            <constraint firstItem="TaQ-Qq-g4N" firstAttribute="trailing" secondItem="UBm-EQ-l1r" secondAttribute="trailing" id="Paz-lu-e6U"/>
+                            <constraint firstItem="UBm-EQ-l1r" firstAttribute="leading" secondItem="TaQ-Qq-g4N" secondAttribute="leading" id="QIo-NJ-aIg"/>
+                            <constraint firstItem="TaQ-Qq-g4N" firstAttribute="bottom" secondItem="UBm-EQ-l1r" secondAttribute="bottom" id="k8b-ah-xqF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="holderView" destination="UBm-EQ-l1r" id="g17-8p-I4a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lv7-fi-pb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="813"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WfJ-dQ-KEJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lD8-T5-aYI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VOe-tI-L6X">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ooA-HX-iFc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80R-tO-QwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Alpha1" width="200" height="200"/>
+        <image name="Alpha2" width="128" height="128"/>
+        <image name="Construct" width="549" height="736"/>
+        <image name="Gray Raven" width="256" height="256"/>
+        <image name="Kuro" width="420" height="142"/>
+        <image name="Lucia1" width="128" height="128"/>
+        <image name="Lucia2" width="140" height="140"/>
+        <image name="PGR" width="512" height="512"/>
+        <image name="Science" width="256" height="256"/>
+        <image name="Serum" width="256" height="256"/>
+        <image name="Solon" width="428" height="468"/>
+        <image name="Title" width="250" height="100"/>
+        <image name="Virus" width="960" height="480"/>
+        <image name="WorldGovernment" width="400" height="400"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
