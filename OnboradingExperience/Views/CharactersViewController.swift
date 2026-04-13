@@ -7,45 +7,80 @@
 
 import UIKit
 
-class CharactersViewController: UIViewController {
-    @IBOutlet weak var LuciaImage1: UIImageView!
-    @IBOutlet weak var HiddenTextForLucia: UITextView!
-    @IBOutlet weak var AlphaImage1: UIImageView!
-    @IBOutlet weak var HiddenTextForAlpha: UITextView!
+class CharactersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    private let tableView: UITableView = {
+        let table = UITableView()
+        table.register(CharacterTableViewCell.self, forCellReuseIdentifier: CharacterTableViewCell.identifier)
+        return table
+    }()
+    
+    private var characters: [Character] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Characters"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(showLanguageMenu))
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Rajdhani-Bold", size: 24)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+        view.backgroundColor = .black
+        view.addSubview(tableView)
+        tableView.backgroundColor = .black
+        tableView.separatorStyle = .none
+        tableView.dataSource = self
+        tableView.delegate = self
 
-        // Do any additional setup after loading the view.
-        let recognizer1 = UITapGestureRecognizer(target: self, action: #selector(showHiddenLucia(_:)))
-        recognizer1.numberOfTapsRequired = 1
-        recognizer1.numberOfTouchesRequired = 1
-        LuciaImage1.isUserInteractionEnabled = true
-        LuciaImage1.addGestureRecognizer(recognizer1)
+        if let gameData = DataLoader.shared.loadGameData() {
+            characters = gameData.characters
+            tableView.reloadData()
+        }
+
+        NotificationCenter.default.addObserver(self, selector: #selector(languageDidChange), name: .languageChanged, object: nil)
+    }
+
+    @objc private func languageDidChange() {
+        tableView.reloadData()
+    }
+
+    @objc private func showLanguageMenu() {
+        let alertController = UIAlertController(title: "Select Language", message: nil, preferredStyle: .actionSheet)
         
-        let recognizer2 = UITapGestureRecognizer(target: self, action: #selector(showHiddenAlpha(_:)))
-        recognizer2.numberOfTapsRequired = 1
-        recognizer2.numberOfTouchesRequired = 1
-        AlphaImage1.isUserInteractionEnabled = true
-        AlphaImage1.addGestureRecognizer(recognizer2)
+        let englishAction = UIAlertAction(title: "English", style: .default) { _ in
+            self.setLanguage(to: "en")
+        }
+        let chineseAction = UIAlertAction(title: "Chinese", style: .default) { _ in
+            self.setLanguage(to: "zh")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(englishAction)
+        alertController.addAction(chineseAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+
+    private func setLanguage(to languageCode: String) {
+        UserDefaults.standard.set(languageCode, forKey: "selectedLanguage")
+        NotificationCenter.default.post(name: .languageChanged, object: nil)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        HiddenTextForLucia.alpha = 0.0
-        HiddenTextForAlpha.alpha = 0.0
+        tableView.frame = view.bounds
     }
     
-    @objc func showHiddenLucia(_ gesture: UITapGestureRecognizer){
-        UIView.animate(withDuration: 1, animations: {
-            self.HiddenTextForLucia.alpha = 1.0
-        })
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return characters.count
     }
     
-    @objc func showHiddenAlpha(_ gesture: UITapGestureRecognizer){
-        UIView.animate(withDuration: 1, animations: {
-            self.HiddenTextForAlpha.alpha = 1.0
-        })
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CharacterTableViewCell.identifier, for: indexPath) as? CharacterTableViewCell else {
+            return UITableViewCell()
+        }
+        let character = characters[indexPath.row]
+        cell.configure(with: character)
+        return cell
     }
 
     /*

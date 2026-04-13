@@ -7,68 +7,79 @@
 
 import UIKit
 
-class OrganizationsViewController: UIViewController {
-    @IBOutlet weak var grayRavenImage: UIImageView!
-    @IBOutlet weak var grayRavenTextView: UITextView!
-    @IBOutlet weak var worldGovernmentImage: UIImageView!
-    @IBOutlet weak var worldGovernmentTextView: UITextView!
-    @IBOutlet weak var csuImage: UIImageView!
-    @IBOutlet weak var csuTextView: UITextView!
-    
+class OrganizationsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    private let tableView: UITableView = {
+        let table = UITableView()
+        table.register(OrganizationTableViewCell.self, forCellReuseIdentifier: OrganizationTableViewCell.identifier)
+        return table
+    }()
+
+    private var organizations: [Organization] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Organizations"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: #selector(showLanguageMenu))
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Rajdhani-Bold", size: 24)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+        view.backgroundColor = .black
+        view.addSubview(tableView)
+        tableView.backgroundColor = .black
+        tableView.separatorStyle = .none
+        tableView.dataSource = self
+        tableView.delegate = self
 
-        // Do any additional setup after loading the view.
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(showGrayRaven(_:)))
-        recognizer.numberOfTouchesRequired = 1
-        recognizer.numberOfTapsRequired = 1
-        grayRavenImage.isUserInteractionEnabled = true
-        grayRavenImage.addGestureRecognizer(recognizer)
-        
-        let recognizer2 = UITapGestureRecognizer(target: self, action: #selector(showWorldGovernment(_:)))
-        recognizer2.numberOfTouchesRequired = 1
-        recognizer2.numberOfTapsRequired = 1
-        worldGovernmentImage.isUserInteractionEnabled = true
-        worldGovernmentImage.addGestureRecognizer(recognizer2)
-        
-        let recognizer3 = UITapGestureRecognizer(target: self, action: #selector(showCSU(_:)))
-        recognizer3.numberOfTouchesRequired = 1
-        recognizer3.numberOfTapsRequired = 1
-        csuImage.isUserInteractionEnabled = true
-        csuImage.addGestureRecognizer(recognizer3)
+        if let gameData = DataLoader.shared.loadGameData() {
+            organizations = gameData.organizations
+            tableView.reloadData()
+        }
+
+        NotificationCenter.default.addObserver(self, selector: #selector(languageDidChange), name: .languageChanged, object: nil)
     }
-    
+
+    @objc private func languageDidChange() {
+        tableView.reloadData()
+    }
+
+    @objc private func showLanguageMenu() {
+        let alertController = UIAlertController(title: "Select Language", message: nil, preferredStyle: .actionSheet)
+        
+        let englishAction = UIAlertAction(title: "English", style: .default) { _ in
+            self.setLanguage(to: "en")
+        }
+        let chineseAction = UIAlertAction(title: "Chinese", style: .default) { _ in
+            self.setLanguage(to: "zh")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(englishAction)
+        alertController.addAction(chineseAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+
+    private func setLanguage(to languageCode: String) {
+        UserDefaults.standard.set(languageCode, forKey: "selectedLanguage")
+        NotificationCenter.default.post(name: .languageChanged, object: nil)
+    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.grayRavenTextView.textColor = .white
-        self.worldGovernmentTextView.textColor = .white
-        self.csuTextView.textColor = .white
+        tableView.frame = view.bounds
     }
 
-    /*
-    // MARK: - Navigation
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return organizations.count
+    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    @objc func showGrayRaven(_ gesture: UITapGestureRecognizer){
-        UIView.animate(withDuration: 0.5, animations: {
-            self.grayRavenTextView.textColor = .black
-        })
-    }
-    
-    @objc func showWorldGovernment(_ gesture: UITapGestureRecognizer){
-        UIView.animate(withDuration: 0.5, animations: {
-            self.worldGovernmentTextView.textColor = .black
-        })
-    }
-    
-    @objc func showCSU(_ gesture: UITapGestureRecognizer){
-        UIView.animate(withDuration: 0.5, animations: {
-            self.csuTextView.textColor = .black
-        })
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: OrganizationTableViewCell.identifier, for: indexPath) as? OrganizationTableViewCell else {
+            return UITableViewCell()
+        }
+        let organization = organizations[indexPath.row]
+        cell.configure(with: organization)
+        return cell
     }
 }
