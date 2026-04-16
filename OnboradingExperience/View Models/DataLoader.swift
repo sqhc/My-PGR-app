@@ -1,20 +1,39 @@
 import Foundation
 
 struct GameData: Codable {
+    let attribution: Attribution?
     let characters: [Character]
     let organizations: [Organization]
 }
 
+struct Attribution: Codable {
+    let en: String
+    let zh: String
+}
+
 struct Character: Codable {
     let name: String
+    let nameZh: String
     let image: String
-    let description: [String: String]
+    let elementType: String
+    let elementTypeZh: String
+    let frameType: String
+    let frameTypeZh: String
+    let organization: String
+    let organizationZh: String
+    let description: Description
+}
+
+struct Description: Codable {
+    let en: String
+    let zh: String
 }
 
 struct Organization: Codable {
     let name: String
+    let nameZh: String
     let image: String
-    let description: [String: String]
+    let description: Description
 }
 
 class DataLoader {

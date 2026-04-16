@@ -1,117 +1,489 @@
 {
+  "attribution": {
+    "en": "Character and organization information sourced from official PGR wikis: grayravens.com/wiki and wiki.biligame.com. Punishing: Gray Raven is © KRAFTON, Inc.",
+    "zh": "角色和组织信息源自官方 PGR 维基：grayravens.com/wiki 和 wiki.biligame.com。战双帕弥什 © KRAFTON Inc."
+  },
   "characters": [
     {
-      "name": "Lucia",
-      "image": "Lucia1",
+      "name": "Lucia: Orion",
+      "nameZh": "露西亚：红莲",
+      "image": "LuciaOrion",
+      "elementType": "Physical",
+      "elementTypeZh": "物理",
+      "frameType": "Rapid",
+      "frameTypeZh": "突撃型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
       "description": {
-        "en": "A member of the Gray Raven team, and the protagonist of the story. She is a skilled warrior who is determined to protect humanity from the Punishing Virus.",
-        "zh": "灰鸦小队的成员，故事的主角。她是一名熟练的战士，决心保护人类免受惩罚病毒的侵害。"
+        "en": "A member of the Gray Raven team and the protagonist of the story. Lucia is an upgraded version of the original Lucia with the Orion module. She is determined to protect humanity from the Punishing Virus and will not hesitate to sacrifice herself for her comrades.",
+        "zh": "灰鸦小队的成员，故事的主角。露西亚是原始露西亚的升级版，搭载红莲模块。她决心保护人类免受帕弥什病毒的侵害，为了保护同伴不惜牺牲自己。"
       }
     },
     {
-      "name": "Alpha",
-      "image": "Alpha1",
+      "name": "Lucia: Daybreak",
+      "nameZh": "露西亚：黎明",
+      "image": "LuciaDaybreak",
+      "elementType": "Fire",
+      "elementTypeZh": "燃烧",
+      "frameType": "Rapid",
+      "frameTypeZh": "突撃型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
       "description": {
-        "en": "A mysterious figure who seems to have a connection to Lucia. Her motives are unclear, but she is a powerful fighter.",
-        "zh": "一个似乎与露西亚有联系的神秘人物。她的动机尚不清楚，但她是一个强大的战士。"
+        "en": "An evolution of Lucia equipped with the Daybreak module. This form grants her the power of fire, making her a formidable force on the battlefield. Her flames burn away all enemies in her path.",
+        "zh": "搭载黎明模块的露西亚进化形态。这种形态赋予她火焰的力量，使她在战场上成为一股不可忽视的力量。她的火焰能烧尽一切敌人。"
       }
     },
     {
-      "name": "Liv",
-      "image": "Liv",
+      "name": "Lucia: Haresphere",
+      "nameZh": "露西亚：深谣",
+      "image": "LuciaHaresphere",
+      "elementType": "Physical",
+      "elementTypeZh": "物理",
+      "frameType": "Rapid",
+      "frameTypeZh": "突撃型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
       "description": {
-        "en": "A support member of the Gray Raven team. She is a kind and gentle person who is always there to help her teammates.",
-        "zh": "灰鸦小队的支援成员。她是一个善良温柔的人，总是在那里帮助她的队友。"
+        "en": "Lucia's Haresphere variant, featuring enhanced combat capabilities with a focus on physical attacks. This form combines agility with devastating melee strikes.",
+        "zh": "露西亚的深谣变体，具备增强的物理攻击能力。这种形态将敏捷性与毁灭性的近战攻击相结合。"
       }
     },
     {
-      "name": "Lee",
-      "image": "Lee",
+      "name": "Lucia: Crow",
+      "nameZh": "露西亚：鸦",
+      "image": "LuciaCrow",
+      "elementType": "Physical",
+      "elementTypeZh": "物理",
+      "frameType": "Rapid",
+      "frameTypeZh": "突撃型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
       "description": {
-        "en": "A member of the Gray Raven team. He is a skilled marksman and a reliable teammate.",
-        "zh": "灰鸦小队的成员。他是一名熟练的射手和可靠的队友。"
+        "en": "The original form of Lucia, known as Crow. This is the base model that started her journey with the Gray Raven squad. Simple yet effective in combat.",
+        "zh": "露西亚的原始形态，名为鸦。这是她与灰鸦小队并肩作战的开始。简单却有效的战斗形态。"
+      }
+    },
+    {
+      "name": "Lucia: Protector",
+      "nameZh": "露西亚：凛冬",
+      "image": "LuciaProtector",
+      "elementType": "Ice",
+      "elementTypeZh": "冰冻",
+      "frameType": "Rapid",
+      "frameTypeZh": "突撃型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
+      "description": {
+        "en": "A powerful variant of Lucia wielding the power of ice. This form allows her to freeze enemies and protect her allies with barriers and shields.",
+        "zh": "拥有冰霜之力的露西亚强力变体。这种形态使她能够冻结敌人，并用屏障和护盾保护盟友。"
+      }
+    },
+    {
+      "name": "Cecilia: Daybreak",
+      "nameZh": "塞西莉亚：颂歌",
+      "image": "CeciliaDaybreak",
+      "elementType": "Fire",
+      "elementTypeZh": "燃烧",
+      "frameType": "Barrage",
+      "frameTypeZh": "爆裂型",
+      "organization": "CSU",
+      "organizationZh": "科学理事会",
+      "description": {
+        "en": "A legendary commander from the past, Cecilia is a powerful construct wielding devastating fire abilities. She is known as one of the strongest constructs ever created.",
+        "zh": "来自过去的传奇指挥官，塞西莉亚是一位拥有毁灭性火焰能力的强大构造体。她被认为是史上最强的构造体之一。"
+      }
+    },
+    {
+      "name": "Amby",
+      "nameZh": "安比",
+      "image": "Amby",
+      "elementType": "Ice",
+      "elementTypeZh": "冰冻",
+      "frameType": "Assault",
+      "frameTypeZh": "强袭型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
+      "description": {
+        "en": "A quiet and mysterious member of the Gray Raven team. Amby wields ice powers and is skilled with close-quarters combat. She rarely speaks but is a dependable teammate.",
+        "zh": "灰鸦小队安静而神秘的成员。安比拥有冰霜之力，擅长近距离战斗。她很少说话，但是可靠的队友。"
+      }
+    },
+    {
+      "name": "Grace",
+      "nameZh": "格莉丝",
+      "image": "Grace",
+      "elementType": "Physical",
+      "elementTypeZh": "物理",
+      "frameType": "Assault",
+      "frameTypeZh": "强袭型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
+      "description": {
+        "en": "A cheerful and energetic member of the Gray Raven team. Grace is skilled with physical combat and brings positivity to the squad despite the grim situation.",
+        "zh": "灰鸦小队开朗活泼的成员。格莉丝擅长物理战斗，尽管局势严峻，她仍为小队带来正能量。"
+      }
+    },
+    {
+      "name": "Lyserg",
+      "nameZh": "丽芙·接雨",
+      "image": "Lyserg",
+      "elementType": "Thunder",
+      "elementTypeZh": "震爆",
+      "frameType": "Heavy",
+      "frameTypeZh": "重击型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
+      "description": {
+        "en": "The support specialist of the Gray Raven team. Lyserg is skilled in technical operations and uses her drone technology to assist her teammates in combat.",
+        "zh": "灰鸦小队的支援专家。丽芙精通技术操作，使用无人机技术协助队友作战。"
+      }
+    },
+    {
+      "name": "Life: Polar",
+      "nameZh": "丽芙·极昼",
+      "image": "LifePolar",
+      "elementType": "Fire",
+      "elementTypeZh": "燃烧",
+      "frameType": "Heavy",
+      "frameTypeZh": "重击型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
+      "description": {
+        "en": "An evolved form of Life with enhanced support capabilities. This variant provides powerful healing and buff abilities to keep the team in the fight.",
+        "zh": "丽芙的进化形态，具备增强的支援能力。这种变体提供强大的治疗和增益能力，让团队保持战斗力。"
+      }
+    },
+    {
+      "name": "Life: Phantom",
+      "nameZh": "丽芙·幻海",
+      "image": "LifePhantom",
+      "elementType": "Thunder",
+      "elementTypeZh": "震爆",
+      "frameType": "Heavy",
+      "frameTypeZh": "重击型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
+      "description": {
+        "en": "A specialized variant of Life with enhanced battlefield control abilities. Her phantom drones can disrupt enemy formations and provide tactical advantages.",
+        "zh": "丽芙的特化变体，具备增强的战场控制能力。她的幻象无人机可以扰乱敌方阵型，提供战术优势。"
+      }
+    },
+    {
+      "name": "Karenina",
+      "nameZh": "卡列尼娜",
+      "image": "Karenina",
+      "elementType": "Fire",
+      "elementTypeZh": "燃烧",
+      "frameType": "Assault",
+      "frameTypeZh": "强袭型",
+      "organization": "Garden",
+      "organizationZh": "空中花园",
+      "description": {
+        "en": "A fiery construct with exceptional combat abilities. Karenina is known for her aggressive fighting style and ability to deal massive fire damage to enemies.",
+        "zh": "拥有卓越战斗能力的火焰构造体。卡列尼娜以激进的战斗风格和对敌人造成大量火焰伤害的能力而闻名。"
+      }
+    },
+    {
+      "name": "Serin: Aether",
+      "nameZh": "瑟琳：苍蔚",
+      "image": "SerinAether",
+      "elementType": "Ice",
+      "elementTypeZh": "冰冻",
+      "frameType": "Heavy",
+      "frameTypeZh": "重击型",
+      "organization": "Garden",
+      "organizationZh": "空中花园",
+      "description": {
+        "en": "A noble and elegant construct with ice-based abilities. Serin excels at area control and providing defensive support to her allies through freezing attacks.",
+        "zh": "拥有冰霜能力的高贵优雅构造体。瑟琳擅长区域控制，通过冰冻攻击为盟友提供防御支援。"
+      }
+    },
+    {
+      "name": "Evie",
+      "nameZh": "伊芙",
+      "image": "Evie",
+      "elementType": "Ice",
+      "elementTypeZh": "冰冻",
+      "frameType": "Barrage",
+      "frameTypeZh": "爆裂型",
+      "organization": "Garden",
+      "organizationZh": "空中花园",
+      "description": {
+        "en": "A young and innocent construct with ice powers. Despite her youthful appearance, Evie is a skilled fighter who uses her ice abilities to freeze and shatter enemies.",
+        "zh": "拥有冰霜能力的年轻纯真构造体。尽管外表年轻，伊芙是一位 skilled 的战斗者，使用冰霜能力冻结并粉碎敌人。"
+      }
+    },
+    {
+      "name": "Bianca: Aether",
+      "nameZh": "比安卡：天穹",
+      "image": "BiancaAether",
+      "elementType": "Thunder",
+      "elementTypeZh": "震爆",
+      "frameType": "Assault",
+      "frameTypeZh": "强袭型",
+      "organization": "Purifying Force",
+      "organizationZh": "净化部队",
+      "description": {
+        "en": "A disciplined and skilled swordswoman from the Purifying Force. Bianca is dedicated to her duty and wields lightning-infused blade techniques.",
+        "zh": "来自净化部队的纪律严明、技艺精湛的女剑客。比安卡忠于职守， wielding 雷电附魔的剑术技巧。"
+      }
+    },
+    {
+      "name": "Bianca: Twilight",
+      "nameZh": "比安卡·晖暮",
+      "image": "BiancaTwilight",
+      "elementType": "Ice",
+      "elementTypeZh": "冰冻",
+      "frameType": "Assault",
+      "frameTypeZh": "强袭型",
+      "organization": "Purifying Force",
+      "organizationZh": "净化部队",
+      "description": {
+        "en": "An evolved form of Bianca with enhanced ice abilities. This variant combines elegant swordsmanship with powerful freezing attacks.",
+        "zh": "比安卡的进化形态，具备增强的冰霜能力。这种变体将优雅的剑术与强大的冰冻攻击相结合。"
       }
     },
     {
       "name": "Watanabe",
+      "nameZh": "渡边",
       "image": "Watanabe",
+      "elementType": "Thunder",
+      "elementTypeZh": "震爆",
+      "frameType": "Assault",
+      "frameTypeZh": "强袭型",
+      "organization": "Garden",
+      "organizationZh": "空中花园",
       "description": {
-        "en": "A former member of the Purifying Force. He is a powerful warrior who is now fighting alongside the Gray Raven team.",
-        "zh": "前净化部队成员。他是一个强大的战士，现在正与灰鸦小队并肩作战。"
-      }
-    },
-    {
-      "name": "Bianca",
-      "image": "Bianca",
-      "description": {
-        "en": "A member of the Purifying Force. She is a skilled swordswoman who is dedicated to her duty.",
-        "zh": "净化部队的成员。她是一位技艺精湛的女剑客，忠于职守。"
+        "en": "A veteran combatant known for his dual-wielding expertise. Watanabe is a reliable fighter who has seen many battles and remains calm under pressure.",
+        "zh": "以双武器技巧闻名的 veteran 战斗人员。渡边是一位可靠的战士，经历过无数战斗，在压力下保持冷静。"
       }
     },
     {
       "name": "Teddy: Spectre",
+      "nameZh": "泰迪：骇影",
       "image": "TeddySpectre",
+      "elementType": "Thunder",
+      "elementTypeZh": "震爆",
+      "frameType": "Barrage",
+      "frameTypeZh": "爆裂型",
+      "organization": "Garden",
+      "organizationZh": "空中花园",
       "description": {
-        "en": "Nearly 80% of the Spectre frame's design was done by Teddy herself. She originally based it on the Decryptor frame, aiming to craft a more combat-ready model, just in case.",
+        "en": "Nearly 80% of the Spectre frame's design was done by Teddy herself. She originally based it on the Decryptor frame, aiming to craft a more combat-ready model.",
         "zh": "骇影机体的设计近八成由泰迪亲手完成。她最初以解密者机体为基础，旨在打造一个更具战斗力的模型，以备不时之需。"
       }
     },
     {
       "name": "Rosetta: Arete",
+      "nameZh": "罗塞塔：贤治",
       "image": "RosettaArete",
+      "elementType": "Physical",
+      "elementTypeZh": "物理",
+      "frameType": "Assault",
+      "frameTypeZh": "强袭型",
+      "organization": "Forest Guard",
+      "organizationZh": "守林人",
       "description": {
-        "en": "This silver-haired humanoid hybrid Construct is the current leader of the Forest Guard in South Murmansk Port. Rosetta and Derek, the Narwhal, are long-acquainted.",
-        "zh": "银发的异人型构造体，原守林人的首领，后作为特别成员被空中花园收容，以人形的姿态投入到战斗之中。"
+        "en": "A silver-haired humanoid hybrid construct and the former leader of the Forest Guard. Rosetta and Derek, the Narwhal, are long-acquainted and fought alongside each other.",
+        "zh": "银发的异人型构造体，原守林人的首领，后作为特别成员被空中花园收容。罗塞塔与独角鲸德雷克是旧识，曾并肩作战。"
+      }
+    },
+    {
+      "name": "Derek",
+      "nameZh": "德雷克",
+      "image": "Derek",
+      "elementType": "Fire",
+      "elementTypeZh": "燃烧",
+      "frameType": "Barrage",
+      "frameTypeZh": "爆裂型",
+      "organization": "Forest Guard",
+      "organizationZh": "守林人",
+      "description": {
+        "en": "A humanoid hybrid construct known as the Narwhal. Derek was the vice-leader of the Forest Guard and is Rosetta's trusted companion.",
+        "zh": "被称为独角鲸的异人型构造体。德雷克曾是守林人的副首领，是罗塞塔值得信赖的伙伴。"
+      }
+    },
+    {
+      "name": "Nettya",
+      "nameZh": "涅缇娅·亡歌",
+      "image": "Nettya",
+      "elementType": "Ice",
+      "elementTypeZh": "冰冻",
+      "frameType": "Barrage",
+      "frameTypeZh": "增幅型",
+      "organization": "CSU",
+      "organizationZh": "科学理事会",
+      "description": {
+        "en": "A support construct from the Science Council. Nettya specializes in providing battlefield support through her unique abilities and the Morgana system.",
+        "zh": "来自科学理事会的支持构造体。涅缇娅擅长通过独特的能力和摩利甘系统提供战场支援。"
+      }
+    },
+    {
+      "name": "A2: Mary",
+      "nameZh": "A2：玛莉",
+      "image": "A2Mary",
+      "elementType": "Physical",
+      "elementTypeZh": "物理",
+      "frameType": "Rapid",
+      "frameTypeZh": "突撃型",
+      "organization": "Kuro",
+      "organizationZh": "黑馆",
+      "description": {
+        "en": "A mysterious construct from Kuro with exceptional combat skills. A2 Mary is known for her agility and deadly close-quarters combat abilities.",
+        "zh": "来自黑馆的神秘构造体，拥有卓越的战斗技巧。A2玛莉以敏捷性和致命的近身战斗能力而闻名。"
+      }
+    },
+    {
+      "name": "A2: Ollie",
+      "nameZh": "A2：奥利",
+      "image": "A2Ollie",
+      "elementType": "Fire",
+      "elementTypeZh": "燃烧",
+      "frameType": "Rapid",
+      "frameTypeZh": "突撃型",
+      "organization": "Kuro",
+      "organizationZh": "黑馆",
+      "description": {
+        "en": "An evolved variant of A2 with fire-based abilities. A2 Ollie combines speed with devastating flame attacks.",
+        "zh": "A2 的进化变体，拥有火焰能力。A2 奥利将速度与毁灭性的火焰攻击相结合。"
+      }
+    },
+    {
+      "name": "Hoshino",
+      "nameZh": "星野",
+      "image": "Hoshino",
+      "elementType": "Ice",
+      "elementTypeZh": "冰冻",
+      "frameType": "Heavy",
+      "frameTypeZh": "重击型",
+      "organization": "Garden",
+      "organizationZh": "空中花园",
+      "description": {
+        "en": "A laid-back construct who loves food and leisure time. Despite her relaxed demeanor, Hoshino is a powerful fighter with ice-based abilities.",
+        "zh": "一个随性的构造体，热爱美食和闲暇时光。尽管态度轻松，星野是一位拥有冰霜能力的强大战士。"
+      }
+    },
+    {
+      "name": "Jade",
+      "nameZh": "翡翠",
+      "image": "Jade",
+      "elementType": "Physical",
+      "elementTypeZh": "物理",
+      "frameType": "Heavy",
+      "frameTypeZh": "重击型",
+      "organization": "Garden",
+      "organizationZh": "空中花园",
+      "description": {
+        "en": "A no-nonsense construct who takes her duties seriously. Jade is a disciplined fighter who wields powerful physical attacks.",
+        "zh": "一个严肃的构造体，认真对待职责。翡翠是一位纪律严明的战士，使用强大的物理攻击。"
+      }
+    },
+    {
+      "name": "Ruby",
+      "nameZh": "鲁比",
+      "image": "Ruby",
+      "elementType": "Fire",
+      "elementTypeZh": "燃烧",
+      "frameType": "Barrage",
+      "frameTypeZh": "爆裂型",
+      "organization": "Garden",
+      "organizationZh": "空中花园",
+      "description": {
+        "en": "An energetic young construct with fire-based abilities. Ruby brings enthusiasm to battle and can unleash powerful flame attacks.",
+        "zh": "一个充满活力的年轻构造体，拥有火焰能力。鲁比为战斗带来热情，能够释放出强大的火焰攻击。"
       }
     }
   ],
   "organizations": [
     {
-      "name": "Gray Raven",
-      "image": "Gray Raven",
+      "name": "Garden",
+      "nameZh": "空中花园",
+      "image": "Garden",
       "description": {
-        "en": "A special task force created to fight the Punishing Virus. They are the last hope for humanity.",
-        "zh": "为对抗惩罚病毒而创建的特种部队。他们是人类最后的希望。"
+        "en": "The Garden is a massive space fortress and the headquarters of the Global Military. It serves as the main base of operations for constructs fighting against the Punishing Virus. The Garden is home to elite task forces including the Gray Raven squad.",
+        "zh": "空中花园是一个巨大的太空堡垒，也是全球军事总部。它是构造体对抗帕弥什病毒的主要作战基地。空中花园是包括灰鸦小队在内的精英特别小队的家。"
       }
     },
     {
-      "name": "World Government",
-      "image": "WorldGovernment",
+      "name": "Gray Raven",
+      "nameZh": "灰鸦小队",
+      "image": "GrayRaven",
       "description": {
-        "en": "The governing body of the remaining human survivors. They are responsible for coordinating the efforts to fight the Punishing Virus.",
-        "zh": "剩余人类幸存者的管理机构。他们负责协调对抗惩罚病毒的努力。"
+        "en": "A special task force consisting of Commander and their constructs. The Gray Raven squad has been instrumental in many critical missions and is known for their unyielding spirit and exceptional combat abilities.",
+        "zh": "由指挥官和其构造体组成的特别部队。灰鸦小队在许多关键任务中发挥了重要作用，以其不屈不挠的精神和卓越的战斗能力而闻名。"
+      }
+    },
+    {
+      "name": "Kuro",
+      "nameZh": "黑馆",
+      "image": "Kuro",
+      "description": {
+        "en": "A secret organization that operates in the shadows. Kuro specializes in covert operations and is known for their elite constructs. Their true objectives remain shrouded in mystery.",
+        "zh": "一个在暗处运作的秘密组织。黑馆擅长隐秘行动，以其精英构造体而闻名。他们的真实目标仍然笼罩在神秘之中。"
       }
     },
     {
       "name": "CSU",
-      "image": "Science",
+      "nameZh": "科学理事会",
+      "image": "CSU",
       "description": {
-        "en": "The Consolidated Science Union, a group of scientists and engineers who are working to find a cure for the Punishing Virus.",
-        "zh": "统一科学联盟，一群致力于寻找惩罚病毒治疗方法的科学家和工程师。"
+        "en": "The Consolidated Science Union is a coalition of scientists and researchers working on finding solutions to the Punishing Virus crisis. They are responsible for construct development and advanced technology research.",
+        "zh": "统一科学联盟是由致力于寻找帕弥什病毒危机解决方案的科学家和研究人员组成的联盟。他们负责构造体开发和先进技术研究。"
       }
     },
     {
       "name": "Purifying Force",
+      "nameZh": "净化部队",
       "image": "PurifyingForce",
       "description": {
-        "en": "A military organization that is responsible for maintaining order and security in the world. They are often at odds with the Gray Raven team.",
-        "zh": "负责维护世界秩序和安全的军事组织。他们经常与灰鸦小队意见相左。"
+        "en": "A military organization responsible for maintaining order and executing the Purge protocols. They often have conflicting views with the Gray Raven team regarding how to handle infected individuals.",
+        "zh": "负责维护秩序和执行净化协议的军事组织。他们与灰鸦小队在如何处理感染者方面经常存在分歧。"
       }
     },
     {
       "name": "Ascendant",
+      "nameZh": "升变",
       "image": "Ascendant",
       "description": {
-        "en": "A mysterious organization that seems to be behind the Punishing Virus. Their goals are unknown, but they are a major threat to humanity.",
-        "zh": "一个似乎是惩罚病毒幕后黑手的神秘组织。他们的目标不明，但他们是人类的主要威胁。"
+        "en": "A mysterious organization that seems to be connected to the Punishing Virus's origins. The Ascendant's goals are unknown, but they represent a significant threat to humanity's survival.",
+        "zh": "一个似乎与帕弥什病毒起源有关的神秘组织。升变的目标不明，但他们代表了人类生存的重大威胁。"
       }
     },
     {
       "name": "Church of Machina",
+      "nameZh": "机械教会",
       "image": "ChurchOfMachina",
       "description": {
-        "en": "A secret organization composed entirely of mechanoids willing to devote themselves to \"Sagemachina\". These mechanoids enlightened by \"Sagemachina\" gained individual and collective consciousness and acted in the name of the \"Church of Machina\" on Earth.",
-        "zh": "完全由机械体所组成的,以“机械先哲”为行动核心的秘密组织。 帕弥什爆发之后,少数未被感染的机械体受机械先哲的启蒙,拥有了自我与群体意识。 这些机械自发地聚集成团体,将传播先哲的理念作为新的使命,以“机械教会”的名义在地球上各自行动。"
+        "en": "A secret organization composed entirely of mechanoids devoted to the 'Sage Machina'. These mechanoids, enlightened by the Sage, gained individual and collective consciousness and spread the Sage's teachings on Earth.",
+        "zh": "完全由机械体所组成的，以'机械先哲'为行动核心的秘密组织。帕弥什爆发之后，少数未被感染的机械体受机械先哲的启蒙，拥有了自我与群体意识，以'机械教会'的名义在地球上行动。"
+      }
+    },
+    {
+      "name": "Forest Guard",
+      "nameZh": "守林人",
+      "image": "ForestGuard",
+      "description": {
+        "en": "A group of humanoid hybrid constructs who protect the forests and wildlands. Led by Rosetta, they were initially hostile to the Garden but later cooperated against common threats.",
+        "zh": "保护森林和荒野的异人型构造体群体。在罗塞塔的领导下，他们最初敌视空中花园，但后来共同对抗威胁。"
+      }
+    },
+    {
+      "name": "Bellerophon",
+      "nameZh": "贝列波芬",
+      "image": "Bellerophon",
+      "description": {
+        "en": "An elite task force from the Purifying Force known for their ruthless efficiency. They operate independently and have been known to clash with other organizations over tactical disagreements.",
+        "zh": "来自净化部队的精英特别部队，以其无情的效率而闻名。他们独立行动，曾因战术分歧与其他组织发生冲突。"
+      }
+    },
+    {
+      "name": "World Government",
+      "nameZh": "世界政府",
+      "image": "WorldGovernment",
+      "description": {
+        "en": "The governing body coordinating the remaining human survivors' efforts against the Punishing Virus. They oversee resource allocation and make strategic decisions for humanity's survival.",
+        "zh": "协调剩余人类幸存者对抗帕弥什病毒的管理机构。他们监督资源分配，为人类的生存做出战略决策。"
       }
     }
   ]

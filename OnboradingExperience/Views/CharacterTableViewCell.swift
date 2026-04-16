@@ -2,7 +2,7 @@ import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
     static let identifier = "CharacterTableViewCell"
-    
+
     private let characterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -11,7 +11,7 @@ class CharacterTableViewCell: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-    
+
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Rajdhani-Bold", size: 20)
@@ -19,7 +19,31 @@ class CharacterTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
+    private let elementTypeLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Rajdhani-Regular", size: 14)
+        label.textColor = .systemGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    private let frameTypeLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Rajdhani-Regular", size: 14)
+        label.textColor = .systemGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    private let organizationLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Rajdhani-Regular", size: 14)
+        label.textColor = .systemGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     private let descriptionTextView: UITextView = {
         let textView = UITextView()
         textView.isEditable = false
@@ -30,55 +54,69 @@ class CharacterTableViewCell: UITableViewCell {
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()
-    
+
     private let separatorView: UIView = {
         let view = UIView()
         view.backgroundColor = .lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .black
         contentView.addSubview(characterImageView)
         contentView.addSubview(nameLabel)
+        contentView.addSubview(elementTypeLabel)
+        contentView.addSubview(frameTypeLabel)
+        contentView.addSubview(organizationLabel)
         contentView.addSubview(descriptionTextView)
         contentView.addSubview(separatorView)
-        
+
         NSLayoutConstraint.activate([
             characterImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             characterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            characterImageView.widthAnchor.constraint(equalToConstant: 100),
-            characterImageView.heightAnchor.constraint(equalToConstant: 100),
-            characterImageView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10),
-            
+            characterImageView.widthAnchor.constraint(equalToConstant: 80),
+            characterImageView.heightAnchor.constraint(equalToConstant: 80),
+
             nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             nameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            
-            descriptionTextView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
+
+            elementTypeLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 2),
+            elementTypeLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
+
+            frameTypeLabel.topAnchor.constraint(equalTo: elementTypeLabel.bottomAnchor, constant: 2),
+            frameTypeLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
+
+            organizationLabel.topAnchor.constraint(equalTo: frameTypeLabel.bottomAnchor, constant: 2),
+            organizationLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
+
+            descriptionTextView.topAnchor.constraint(equalTo: organizationLabel.bottomAnchor, constant: 5),
             descriptionTextView.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
             descriptionTextView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            descriptionTextView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            
+            descriptionTextView.bottomAnchor.constraint(equalTo: separatorView.topAnchor, constant: -5),
+
             separatorView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             separatorView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             separatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             separatorView.heightAnchor.constraint(equalToConstant: 0.5)
         ])
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     public func configure(with character: Character) {
         characterImageView.image = UIImage(named: character.image)
         nameLabel.text = character.name
+        elementTypeLabel.text = character.elementType
+        frameTypeLabel.text = character.frameType
+        organizationLabel.text = character.organization
         descriptionTextView.text = getLocalizedDescription(from: character.description)
     }
-    
+
     private func getLocalizedDescription(from descriptions: [String: String]) -> String {
         let preferredLanguage = UserDefaults.standard.string(forKey: "selectedLanguage") ?? Locale.preferredLanguages.first?.prefix(2) ?? "en"
         return descriptions[String(preferredLanguage)] ?? descriptions["en"] ?? ""
