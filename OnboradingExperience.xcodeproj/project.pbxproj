@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0000000000EF5523A7345A /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000000AE82FBA2472 /* DataLoader.swift */; };
+		AA0000000000BF9A38820B21 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000DB2D4494FB39 /* Extensions.swift */; };
+		AA00000000003AB731E6E087 /* GameDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000005AFF2E1E579F /* GameDataRepository.swift */; };
+		AA000000000059B47FBB4BC1 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000573FEC2B0A59 /* CharacterTableViewCell.swift */; };
+		AA0000000000F9EC4A78B3F3 /* OrganizationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000D3CBDEA4D1FB /* OrganizationTableViewCell.swift */; };
+		AA0000000000734DF056FAB7 /* LocalizedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000000009FF1B1C020FF /* LocalizedListViewController.swift */; };
 		063C9E0D29B52A1900AA995D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9E0C29B52A1900AA995D /* AppDelegate.swift */; };
 		063C9E0F29B52A1900AA995D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9E0E29B52A1900AA995D /* SceneDelegate.swift */; };
 		063C9E1129B52A1900AA995D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9E1029B52A1900AA995D /* ViewController.swift */; };
@@ -65,6 +71,12 @@
 		06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		06961E2B29B96155007F32CF /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		06961E2D29B9619D007F32CF /* OrganizationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsViewController.swift; sourceTree = "<group>"; };
+		AA00000000000AE82FBA2472 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataLoader.swift"; sourceTree = "<group>"; };
+		AA0000000000DB2D4494FB39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions.swift"; sourceTree = "<group>"; };
+		AA00000000005AFF2E1E579F /* GameDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameDataRepository.swift"; sourceTree = "<group>"; };
+		AA0000000000573FEC2B0A59 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterTableViewCell.swift"; sourceTree = "<group>"; };
+		AA0000000000D3CBDEA4D1FB /* OrganizationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrganizationTableViewCell.swift"; sourceTree = "<group>"; };
+		AA00000000009FF1B1C020FF /* LocalizedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalizedListViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +160,9 @@
 		06961E3029B992E4007F32CF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA00000000009FF1B1C020FF /* LocalizedListViewController.swift */,
+				AA0000000000D3CBDEA4D1FB /* OrganizationTableViewCell.swift */,
+				AA0000000000573FEC2B0A59 /* CharacterTableViewCell.swift */,
 				063C9E1029B52A1900AA995D /* ViewController.swift */,
 				06961E2329B9118E007F32CF /* CollectionTableViewCell.swift */,
 				06961E2729B91EAF007F32CF /* TileCollectionViewCell.swift */,
@@ -161,6 +176,9 @@
 		06961E3129B99325007F32CF /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				AA00000000005AFF2E1E579F /* GameDataRepository.swift */,
+				AA0000000000DB2D4494FB39 /* Extensions.swift */,
+				AA00000000000AE82FBA2472 /* DataLoader.swift */,
 				06961E2529B91B9E007F32CF /* CollectionTableViewCellViewModel.swift */,
 				06961E2929B92093007F32CF /* TileCollectionViewCellViewModel.swift */,
 			);
@@ -298,6 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0000000000EF5523A7345A /* DataLoader.swift in Sources */,
+				AA0000000000BF9A38820B21 /* Extensions.swift in Sources */,
+				AA00000000003AB731E6E087 /* GameDataRepository.swift in Sources */,
+				AA000000000059B47FBB4BC1 /* CharacterTableViewCell.swift in Sources */,
+				AA0000000000F9EC4A78B3F3 /* OrganizationTableViewCell.swift in Sources */,
+				AA0000000000734DF056FAB7 /* LocalizedListViewController.swift in Sources */,
 				06961E2629B91B9E007F32CF /* CollectionTableViewCellViewModel.swift in Sources */,
 				06961E2A29B92093007F32CF /* TileCollectionViewCellViewModel.swift in Sources */,
 				063C9E1729B52A1900AA995D /* OnboradingExperience.xcdatamodeld in Sources */,

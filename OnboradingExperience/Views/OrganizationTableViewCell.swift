@@ -1,7 +1,6 @@
 import UIKit
 
 class OrganizationTableViewCell: UITableViewCell {
-    static let identifier = "OrganizationTableViewCell"
     
     private let organizationImageView: UIImageView = {
         let imageView = UIImageView()
@@ -74,13 +73,8 @@ class OrganizationTableViewCell: UITableViewCell {
     }
     
     public func configure(with organization: Organization) {
-        organizationImageView.image = UIImage(named: organization.image)
-        nameLabel.text = organization.name
-        descriptionTextView.text = getLocalizedDescription(from: organization.description)
-    }
-    
-    private func getLocalizedDescription(from descriptions: [String: String]) -> String {
-        let preferredLanguage = UserDefaults.standard.string(forKey: "selectedLanguage") ?? Locale.preferredLanguages.first?.prefix(2) ?? "en"
-        return descriptions[String(preferredLanguage)] ?? descriptions["en"] ?? ""
+        organizationImageView.image = UIImage.catalogueImage(named: organization.image)
+        nameLabel.text = organization.localizedName
+        descriptionTextView.text = organization.localizedDescription
     }
 }

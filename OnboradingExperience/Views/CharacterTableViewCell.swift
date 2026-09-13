@@ -1,7 +1,6 @@
 import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
-    static let identifier = "CharacterTableViewCell"
 
     private let characterImageView: UIImageView = {
         let imageView = UIImageView()
@@ -109,16 +108,31 @@ class CharacterTableViewCell: UITableViewCell {
     }
 
     public func configure(with character: Character) {
-        characterImageView.image = UIImage(named: character.image)
-        nameLabel.text = character.name
-        elementTypeLabel.text = character.elementType
-        frameTypeLabel.text = character.frameType
-        organizationLabel.text = character.organization
-        descriptionTextView.text = getLocalizedDescription(from: character.description)
+        characterImageView.image = UIImage.catalogueImage(named: character.image)
+        nameLabel.text = character.localizedName
+        elementTypeLabel.text = character.localizedElementType
+        frameTypeLabel.text = character.localizedFrameType
+        organizationLabel.text = character.localizedOrganization
+        descriptionTextView.text = character.localizedDescription
+    }
+}
+
+extension UIImage {
+    /// Catalogue art in the current language, or a visible placeholder.
+    ///
+    /// `image` values come from `GameData.json`, so a value without a matching
+    /// imageset is a data problem rather than a programming error: it must show
+    /// a placeholder instead of the empty frame this used to render.
+    static func catalogueImage(named name: String) -> UIImage? {
+        if let image = UIImage(named: name) { return image }
+        print("Missing catalogue image asset \"\(name)\"")
+        return placeholder
     }
 
-    private func getLocalizedDescription(from descriptions: [String: String]) -> String {
-        let preferredLanguage = UserDefaults.standard.string(forKey: "selectedLanguage") ?? Locale.preferredLanguages.first?.prefix(2) ?? "en"
-        return descriptions[String(preferredLanguage)] ?? descriptions["en"] ?? ""
-    }
+    /// Neutral placeholder drawn at request time, so it needs no asset.
+    static let placeholder: UIImage? = {
+        let configuration = UIImage.SymbolConfiguration(pointSize: 34, weight: .regular)
+        let symbol = UIImage(systemName: "questionmark.square.dashed", withConfiguration: configuration)
+        return symbol?.withTintColor(.systemGray, renderingMode: .alwaysOriginal)
+    }()
 }

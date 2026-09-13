@@ -7,13 +7,18 @@
 
 import UIKit
 
+/// One row of the home screen: a horizontal strip of tiles.
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    static let identifier = "collectionTableCell"
-    
-    private var viewModels : [TileCollectionViewCellViewModel] = []
-    
+
+    /// Ratio applied to a tile's width to get its height.
+    private static let tileHeightRatio: CGFloat = 1.1
+    /// Tile width as a fraction of the strip's width.
+    private static let tileWidthRatio: CGFloat = 2.5
+
     weak var delegate: CollectionTableViewCellDelegate?
-    
+
+    private var viewModels: [TileCollectionViewCellViewModel] = []
+
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -23,7 +28,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         collection.backgroundColor = .systemBackground
         return collection
     }()
-// MARK: - Init Table View Cell
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .systemBackground
@@ -31,54 +36,60 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-// MARK: - Layout
+
     override func layoutSubviews() {
         super.layoutSubviews()
         collectionView.frame = contentView.bounds
     }
-    
-// MARK: - Collection View
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModels.count
+
+    /// Height this row wants for the given width.
+    static func height(forWidth width: CGFloat) -> CGFloat {
+        let tileWidth = width / tileWidthRatio
+        return tileWidth / tileHeightRatio
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TileCollectionViewCell.identifier, for: indexPath) as? TileCollectionViewCell else{
-            fatalError()
-        }
-        cell.congfigure(with: viewModels[indexPath.row])
-        return cell
-    }
-    
-    func congfigure(with viewModel: CollectionTableViewModel){
-        self.viewModels = viewModel.viewModels
+
+    func configure(with viewModel: CollectionTableViewModel) {
+        viewModels = viewModel.viewModels
         collectionView.reloadData()
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width: CGFloat = contentView.frame.size.width/2.5
-        return CGSize(width: width, height: width/1.1)
+
+    // MARK: - UICollectionViewDataSource
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModels.count
     }
-    
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: TileCollectionViewCell.identifier,
+            for: indexPath
+        ) as? TileCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.configure(with: viewModels[indexPath.row])
+        return cell
+    }
+
+    // MARK: - UICollectionViewDelegateFlowLayout
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        let width = contentView.frame.size.width / Self.tileWidthRatio
+        return CGSize(width: width, height: width / Self.tileHeightRatio)
+    }
+
+    // MARK: - UICollectionViewDelegate
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let viewModel = viewModels[indexPath.row]
-        delegate?.DidTapItem(with: viewModel)
+        guard viewModels.indices.contains(indexPath.row) else { return }
+        delegate?.didTapItem(with: viewModels[indexPath.row])
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
