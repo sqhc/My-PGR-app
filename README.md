@@ -24,13 +24,21 @@ An iOS application that showcases character and organization information from th
 My-PGR-app/
 ├── OnboradingExperience/
 │   ├── Views/
+│   │   ├── ViewController.swift                 # Home tiles + onboarding gate
+│   │   ├── CollectionTableViewCell.swift        # Horizontal tile strip
+│   │   ├── TileCollectionViewCell.swift         # Single tile
+│   │   ├── WelcomeViewController.swift          # 5-page onboarding
+│   │   ├── LocalizedListViewController.swift    # Shared list-screen behaviour
 │   │   ├── CharactersViewController.swift       # Character list view
 │   │   ├── OrganizationsViewController.swift    # Organization list view
-│   │   ├── CharacterTableViewCell.swift        # Custom character cell
-│   │   └── OrganizationTableViewCell.swift     # Custom organization cell
+│   │   ├── CharacterTableViewCell.swift         # Custom character cell
+│   │   └── OrganizationTableViewCell.swift      # Custom organization cell
 │   ├── View Models/
-│   │   ├── DataLoader.swift                     # Data loading logic
-│   │   └── Extensions.swift                     # Utility extensions
+│   │   ├── GameDataRepository.swift             # Reads + caches GameData.json
+│   │   ├── DataLoader.swift                     # Models and legacy access point
+│   │   ├── Extensions.swift                     # Language, bilingual text, onboarding flag
+│   │   ├── CollectionTableViewCellViewModel.swift
+│   │   └── TileCollectionViewCellViewModel.swift
 │   ├── Resources/
 │   │   └── GameData.json                        # Character and organization data
 │   ├── Assets.xcassets/                         # App images and icons
@@ -38,6 +46,10 @@ My-PGR-app/
 │   ├── AppDelegate.swift                        # App lifecycle management
 │   ├── SceneDelegate.swift                      # Scene configuration
 │   └── Info.plist                               # App configuration
+├── Scripts/build_imagesets.py                   # Generates imagesets from dropped art
+├── _incoming_images/                            # Staging area for new artwork
+├── docs/android-todo.md                         # Known Android-side work
+├── CONTEXT.md                                   # Domain glossary
 ├── android/                                     # Android project files (optional)
 └── README.md                                    # Project documentation
 ```
@@ -56,32 +68,54 @@ My-PGR-app/
 
 ## Data Structure
 
-The app uses a JSON-based data model:
+The app uses a JSON-based data model. `image` is the **catalogue key**: it must equal
+the imageset name and the file name (see [Adding artwork](#adding-artwork)).
 
 ```json
 {
+  "attribution": { "en": "…", "zh": "…" },
   "characters": [
     {
-      "name": "Lucia",
-      "image": "Lucia1",
-      "description": {
-        "en": "English description",
-        "zh": "Chinese description"
-      }
+      "name": "Lucia: Orion",
+      "nameZh": "露西亚：红莲",
+      "image": "LuciaOrion",
+      "elementType": "Physical",
+      "elementTypeZh": "物理",
+      "frameType": "Rapid",
+      "frameTypeZh": "突撃型",
+      "organization": "Gray Raven",
+      "organizationZh": "灰鸦小队",
+      "description": { "en": "…", "zh": "…" }
     }
   ],
   "organizations": [
     {
-      "name": "Organization Name",
-      "image": "image_name",
-      "description": {
-        "en": "English description",
-        "zh": "Chinese description"
-      }
+      "name": "Gray Raven",
+      "nameZh": "灰鸦小队",
+      "image": "GrayRaven",
+      "description": { "en": "…", "zh": "…" }
     }
   ]
 }
 ```
+
+Names and the other metadata fields are bilingual too. Any `…Zh` field may be omitted;
+the app falls back to the English text rather than showing an empty label.
+
+## Adding artwork
+
+An item's `image` value, its `.imageset` name, and its file name are the same string.
+To add or replace art:
+
+1. Drop the file into `_incoming_images/`, named after the `image` value
+   (e.g. `LuciaOrion.png`).
+2. Run `python3 Scripts/build_imagesets.py` — it generates the imageset plus its
+   `Contents.json`, and reports which keys are still outstanding.
+3. Confirm the new imageset is included in `Assets.xcassets` in Xcode, then run the
+   unit tests: `testEveryCatalogueImageResolves` fails if any catalogue key has no art.
+
+A missing imageset is not a crash: the row shows a placeholder and logs the key.
+
 
 ## Language Support
 

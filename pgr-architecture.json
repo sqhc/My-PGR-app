@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "PGR 图鉴应用 · 项目结构图",
+    "output": "pgr-architecture.html",
+    "quality_profile": "showcase",
+    "viewBox": [
+      2400,
+      1100
+    ],
+    "views": [
+      {
+        "id": "app-launch",
+        "label": "应用启动",
+        "focus": [
+          "appEntry",
+          "scene",
+          "welcome",
+          "mainVC"
+        ],
+        "note": "AppDelegate 建窗口，SceneDelegate 挂载主界面，首次启动先走引导页。"
+      },
+      {
+        "id": "home-navigation",
+        "label": "首页导航轴",
+        "focus": [
+          "mainVC",
+          "collectionTable",
+          "tileCell",
+          "hub",
+          "characters",
+          "organizations"
+        ],
+        "note": "纵向 UITableView 套横向 UICollectionView，磁贴点击后按标题分发路由。"
+      },
+      {
+        "id": "shared-data",
+        "label": "共享数据层",
+        "focus": [
+          "mainVC",
+          "dataLoader",
+          "gamedata",
+          "organizations"
+        ],
+        "note": "单例 DataLoader 把 JSON 解析成模型，列表控制器取用同一份数据。"
+      },
+      {
+        "id": "cross-platform",
+        "label": "跨平台对照",
+        "focus": [
+          "gamedata",
+          "androidHub",
+          "androidChars",
+          "androidAdapters",
+          "androidOrgs"
+        ],
+        "note": "Android 侧同构实现：Activity + RecyclerView + Gson 复用同一份 JSON。"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "appEntry",
+      "type": "external",
+      "label": "AppDelegate",
+      "sublabel": "@main 入口 · Core Data 栈",
+      "pos": [
+        420,
+        70
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "scene",
+      "type": "external",
+      "label": "SceneDelegate",
+      "sublabel": "UIWindowScene 生命周期",
+      "pos": [
+        420,
+        230
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "welcome",
+      "type": "frontend",
+      "label": "WelcomeViewController",
+      "sublabel": "5 页 UIScrollView 引导",
+      "pos": [
+        80,
+        380
+      ],
+      "size": [
+        210,
+        72
+      ],
+      "tag": "首次启动"
+    },
+    {
+      "id": "mainVC",
+      "type": "frontend",
+      "label": "ViewController",
+      "sublabel": "首页 UITableView",
+      "pos": [
+        420,
+        380
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "collectionTable",
+      "type": "frontend",
+      "label": "CollectionTableViewCell",
+      "sublabel": "纵向行 · 内嵌横向容器",
+      "pos": [
+        700,
+        300
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "tileCell",
+      "type": "frontend",
+      "label": "TileCollectionViewCell",
+      "sublabel": "磁贴 · 背景色 + 标题",
+      "pos": [
+        700,
+        480
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "hub",
+      "type": "backend",
+      "label": "CollectionTableViewCellDelegate",
+      "sublabel": "DidTapItem 按标题分发",
+      "pos": [
+        1000,
+        500
+      ],
+      "size": [
+        210,
+        72
+      ],
+      "tag": "导航轴"
+    },
+    {
+      "id": "characters",
+      "type": "frontend",
+      "label": "CharactersViewController",
+      "sublabel": "CharacterTableViewCell",
+      "pos": [
+        1240,
+        430
+      ],
+      "size": [
+        220,
+        72
+      ]
+    },
+    {
+      "id": "organizations",
+      "type": "frontend",
+      "label": "OrganizationsViewController",
+      "sublabel": "OrganizationTableViewCell",
+      "pos": [
+        1560,
+        680
+      ],
+      "size": [
+        220,
+        72
+      ]
+    },
+    {
+      "id": "dataLoader",
+      "type": "backend",
+      "label": "DataLoader.shared",
+      "sublabel": "Codable 解析 · 单例",
+      "pos": [
+        80,
+        760
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "gamedata",
+      "type": "database",
+      "label": "GameData.json",
+      "sublabel": "Bundle 资源 · 26 角色 / 10 组织",
+      "pos": [
+        900,
+        760
+      ],
+      "size": [
+        230,
+        72
+      ]
+    },
+    {
+      "id": "androidHub",
+      "type": "frontend",
+      "label": "MainActivity",
+      "sublabel": "入口按钮 + 语言菜单",
+      "pos": [
+        80,
+        920
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "androidChars",
+      "type": "frontend",
+      "label": "CharactersActivity",
+      "sublabel": "RecyclerView · LinearLayoutManager",
+      "pos": [
+        500,
+        920
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "androidOrgs",
+      "type": "frontend",
+      "label": "OrganizationsActivity",
+      "sublabel": "RecyclerView · LinearLayoutManager",
+      "pos": [
+        1600,
+        920
+      ],
+      "size": [
+        210,
+        72
+      ]
+    },
+    {
+      "id": "androidAdapters",
+      "type": "backend",
+      "label": "Character / OrganizationAdapter",
+      "sublabel": "列表项绑定 · 读取语言偏好",
+      "pos": [
+        900,
+        920
+      ],
+      "size": [
+        240,
+        72
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "iOS 应用 · Swift 5 + UIKit（主实现）",
+      "wraps": [
+        "appEntry",
+        "scene",
+        "welcome",
+        "mainVC",
+        "collectionTable",
+        "tileCell",
+        "hub",
+        "characters",
+        "organizations",
+        "dataLoader",
+        "gamedata"
+      ],
+      "pad": 34
+    },
+    {
+      "kind": "region",
+      "label": "Android 并行实现 · Kotlin + Gradle",
+      "wraps": [
+        "androidHub",
+        "androidChars",
+        "androidOrgs",
+        "androidAdapters"
+      ],
+      "pad": 28
+    }
+  ],
+  "connections": [
+    {
+      "id": "e_launch",
+      "from": "appEntry",
+      "to": "scene",
+      "label": "启动窗口",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        700,
+        190
+      ]
+    },
+    {
+      "id": "e_first_run",
+      "from": "scene",
+      "to": "welcome",
+      "label": "首次启动",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e_root",
+      "from": "scene",
+      "to": "mainVC",
+      "label": "主界面",
+      "variant": "emphasis",
+      "fromSide": "left",
+      "toSide": "left"
+    },
+    {
+      "id": "e_finish",
+      "from": "welcome",
+      "to": "mainVC",
+      "label": "引导完成",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e_rows",
+      "from": "mainVC",
+      "to": "collectionTable",
+      "label": "注册复用标识",
+      "fromSide": "top",
+      "toSide": "left"
+    },
+    {
+      "id": "e_cells",
+      "from": "collectionTable",
+      "to": "tileCell",
+      "label": "横向磁贴",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        805,
+        386
+      ]
+    },
+    {
+      "id": "e_taps",
+      "from": "tileCell",
+      "to": "hub",
+      "label": "点击回调",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "left"
+    },
+    {
+      "id": "e_chars",
+      "from": "hub",
+      "to": "characters",
+      "label": "角色",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [
+        1222,
+        586
+      ]
+    },
+    {
+      "id": "e_orgs",
+      "from": "hub",
+      "to": "organizations",
+      "label": "组织",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e_load",
+      "from": "mainVC",
+      "to": "dataLoader",
+      "label": "loadGameData()",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e_open",
+      "from": "dataLoader",
+      "to": "gamedata",
+      "label": "url(forResource:)",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e_fetch",
+      "from": "organizations",
+      "to": "gamedata",
+      "label": "读取 Bundle 资源",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "e_android_chars",
+      "from": "androidHub",
+      "to": "androidChars",
+      "label": "startActivity",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e_android_orgs",
+      "from": "androidHub",
+      "to": "androidOrgs",
+      "label": "startActivity",
+      "variant": "emphasis",
+      "fromSide": "bottom",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e_android_adapters",
+      "from": "androidChars",
+      "to": "androidAdapters",
+      "label": "装配适配器",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e_android_reuse",
+      "from": "gamedata",
+      "to": "androidAdapters",
+      "label": "同构数据模型 · Gson",
+      "variant": "security",
+      "fromSide": "bottom",
+      "toSide": "top"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "分层职责",
+      "items": [
+        "UI 层用 MVC：控制器 + 自定义 cell",
+        "数据层只有 DataLoader 单例",
+        "状态层用 UserDefaults 与通知",
+        "数据源自官方 PGR 维基，离线打包进 Bundle"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "导航轴",
+      "items": [
+        "首页纵向 UITableView 内嵌横向 UICollectionView",
+        "磁贴标题即路由键，由代理 switch 分发",
+        "角色 / 组织页各自带语言菜单",
+        "Items & Concepts、Developers 仍是占位磁贴"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "值得注意",
+      "items": [
+        "角色页与组织页各自调用 DataLoader 解析同一份 JSON",
+        "模型同时保留 name 与 nameZh 双语字段",
+        "语言切换靠通知中心广播后整表重载",
+        "Android 侧复用同一份 GameData.json"
+      ]
+    }
+  ]
+}

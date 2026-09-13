@@ -1,0 +1,31 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Local build output used when running xcodebuild from a sandbox
+.xcbuild*/
+.xcresult
+
+# Artwork staging: the README documents the flow, the images are transient
+_incoming_images/*
+!_incoming_images/README.md
+
+# macOS
+.DS_Store
+
+# Gradle (Android side)
+.gradle/
+
+# Nested clone of this same repository; committing it would nest repos
+android_backup/
+
+# Generated visual-check evidence: local proof only, not project content
+pgr-architecture.visual-check*
+
+# Python bytecode from Scripts/
+__pycache__/
+*.pyc
